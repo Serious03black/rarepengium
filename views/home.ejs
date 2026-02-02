@@ -776,13 +776,13 @@ Trusted by Leading Brands
                             <input type="text" name="membership" placeholder="GAP Membership (optional)">
                           </div>
                           <div class="glass-formfield">
-                            <input type="url" name="website" placeholder="Website / Instagram Link">
+                            <input type="text" name="website" placeholder="Website / Instagram Link">
                           </div>
                           <div class="glass-formfield">
                             <input type="text" name="location" placeholder="Your Location">
                           </div>
                           <div class="glass-formfield">
-                            <textarea name="message" placeholder="Your Requirement*" required></textarea>
+                            <textarea name="message" placeholder="Your Requirement"></textarea>
                           </div>
 
                           <div class="btn-container">
@@ -1046,15 +1046,7 @@ Trusted by Leading Brands
             field.setCustomValidity(isValid ? '' : 'Invalid email');
         }
 
-        // Name min length
-        if (field.name === 'name' && field.value.trim()) {
-            isValid = field.value.trim().length >= 2;
-        }
-
-        // Message min length
-        if (field.name === 'message' && field.value.trim()) {
-            isValid = field.value.trim().length >= 10;
-        }
+     
 
         // Apply invalid class (error visibility depends on .touched in CSS)
         wrapper.classList.toggle('invalid', !isValid);
@@ -1244,7 +1236,7 @@ Trusted by Leading Brands
             }
 
             .marquee-track img {
-              height: 120px;
+              height: 144px;
               max-width: none;
               flex-shrink: 0;
               object-fit: contain;
