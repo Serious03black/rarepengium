@@ -557,10 +557,10 @@
             isValid = field.value.trim().length >= 2;
         }
 
-        // Message min length
-        if (field.name === 'message' && field.value.trim()) {
-            isValid = field.value.trim().length >= 10;
-        }
+        // // Message min length
+        // if (field.name === 'message' && field.value.trim()) {
+        //     isValid = field.value.trim().length >= 10;
+        // }
 
         // Apply invalid class (error visibility depends on .touched in CSS)
         wrapper.classList.toggle('invalid', !isValid);
