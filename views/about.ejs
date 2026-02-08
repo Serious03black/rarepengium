@@ -513,7 +513,6 @@
             <img class="show-dark" src="assets/imgs/icon/angle-left-light.webp" alt="icon">
           </div>
           <div class="testimonial-button-next nav-icon">
-            <img class="show-light" src="assets/imgs/icon/angle-right.webp" alt="icon">
             <img class="show-dark" src="assets/imgs/icon/angle-right-light.webp" alt="icon">
           </div>
         </div>
@@ -526,6 +525,7 @@
         </main>
         <!-- footer area start  -->
         <footer class="footer-area">
+         
                                                              <style>
                                                               .footer-cta {
                                                                  display: grid;
@@ -544,6 +544,44 @@
                                                                 }
                                                                 
                                                                }
+                                                               .social-vertical {
+  position: fixed;
+  bottom: 138px;
+  display: flex;
+  justify-content: start;
+  gap: 14px;
+  z-index: 999;
+  left: 70%;
+}
+
+.social-vertical a {
+  width: 42px;
+  height: 42px;
+  background: #111;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.social-vertical a:hover {
+  background: #ff6a00;
+  transform: translateY(-4px);
+}
+
+/* Mobile handling */
+@media (max-width: 768px) {
+  .social-vertical {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
           </style>
           <div class="container">
             <div class="footer-area-inner  ">
@@ -617,6 +655,20 @@
                       }
                     });
                   </script>
+                   <div class="social-vertical">
+  <a href="https://www.instagram.com/golden.apple.productions/" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+    <i class="fab fa-x-twitter"></i>
+  </a>
+  <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+</div>
                 </div>
               </div>
             </div>
@@ -640,6 +692,9 @@
                 </ul>
               </div>
             </div>
+            <!-- Social Media Vertical Icons -->
+
+
           </div>
         </footer>
         <!-- footer area end  -->
