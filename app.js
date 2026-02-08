@@ -132,7 +132,7 @@ app.get("/retail-catalogue-shoot", (req, res) => res.render("service4"));
 app.get("/brand-campaigns-editorials-shoot", (req, res) => res.render("service5"));
 app.get("/post-production-shoot", (req, res) => res.render("service6"));
 
-app.get("/terms", (req, res) => res.render("terms"));
+app.get("/Terms&Conditions", (req, res) => res.render("terms"));
 app.get("/PrivacyPolicy", (req, res) => res.render("PP"));
 
 app.get("/premium-shoot", (req, res) => res.render("landingpage"));

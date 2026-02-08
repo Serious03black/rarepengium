@@ -619,7 +619,7 @@ about testimonial
       <p>© 2025 – 2026 Golden Apple Productions | Mumbai, India</p>
       <div style="margin-top:20px;">
         <a href="/privacy" style="margin:0 15px;">Privacy Policy</a>
-        <a href="/terms" style="margin:0 15px;">Terms & Conditions</a>
+        <a href="/Terms&Conditions" style="margin:0 15px;">Terms & Conditions</a>
         <a href="/contact" style="margin:0 15px;">Contact</a>
       </div>
     </div>
