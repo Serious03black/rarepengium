@@ -10,27 +10,36 @@
   <title>Golden Apple Productions</title>
 
   <!-- Fav Icon -->
-  <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.png">
+<link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.png">
 
-  <!-- All CSS files -->
+<!-- Preload critical CSS -->
+<link rel="preload" href="assets/css/bootstrap.min.css" as="style">
+<link rel="preload" href="assets/css/master-video-production.css" as="style">
+
+<!-- Non-blocking CSS loading -->
+<link rel="stylesheet" href="assets/css/bootstrap.min.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="assets/css/all.min.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="assets/css/swiper-bundle.min.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="assets/css/progressbar.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="assets/css/meanmenu.min.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="assets/css/magnific-popup.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="assets/css/master-video-production.css">
+<link rel="stylesheet" href="assets/css/master-portfolio-carousel.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="assets/css/effect-carousel.min.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="assets/css/master-contact.css" media="print" onload="this.media='all'">
+
+<!-- Swiper CDN (keep only once) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" media="print" onload="this.media='all'">
+
+<!-- Google Fonts (already optimized) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<noscript>
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/progressbar.css">
-  <link rel="stylesheet" href="assets/css/meanmenu.min.css">
-  <link rel="stylesheet" href="assets/css/magnific-popup.css">
   <link rel="stylesheet" href="assets/css/master-video-production.css">
-  <link rel="stylesheet" href="assets/css/master-portfolio-carousel.css">
-  <link rel="stylesheet" href="assets/css/effect-carousel.min.css">
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-
-  <link rel="stylesheet" href="assets/css/master-portfolio-carousel.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/master-contact.css">
+</noscript>
 
 </head>
 
@@ -257,8 +266,8 @@
       <div class="header-area__inner">
         <div class="header__logo">
           <a target="_blank" href="/">
-            <img class="show-light mt-1" src="assets/imgs/logo/logo.png" width="70px" alt="Site Logo">
-            <img class="show-dark mt-1" src="assets/imgs/logo/logo-light.png" width="70px" alt="Site Logo">
+            <img class="show-light mt-1" src="assets/imgs/logo/logo.png" width="70px" alt="Site Logo" loading="lazy">
+            <img class="show-dark mt-1" src="assets/imgs/logo/logo-light.png" width="70px" alt="Site Logo" loading="lazy">
           </a>
         </div>
         <div class="header__nav pos-center">
@@ -303,7 +312,7 @@
           <section class="hero-area">
             <div class="hero-video-wrapper">
               <video autoplay muted loop playsinline preload="auto" aria-label="Golden Apple Productions Background Video">
-                <source src="https://res.cloudinary.com/dpztzthmz/video/upload/v1769099187/HeroVideo_d0f959.mp4" type="video/mp4" />
+                <source src="https://res.cloudinary.com/dpztzthmz/video/upload/v1769099187/HeroVideo_d0f959.mp4" preload="none" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -346,7 +355,7 @@
           </style>
 
           <!-- text slider area start -->
-          <div class="container large has_fade_anim">
+          <div class="container large ">
             <div class="text-slider">
               <div class="swiper text-slider-active">
                 <div class="swiper-wrapper">
@@ -412,9 +421,9 @@
                 <div id="app" class="portfolio-slider">
                   <div class="swiper portfolio-active">
                     <div class="swiper-wrapper">
-                      <div class="swiper-slide has_fade_anim" data-fade-from="bottom">
+                      <div class="swiper-slide " data-fade-from="bottom">
                         <a target="_blank" href="/ethnic-fashion-shoots" style="background-position: center;object-fit: contain;" class="swiper-carousel-animate-opacity">
-                          <img src="assets/imgs/Pictures/Ethnic(5).jpg" alt="image">
+                          <img src="assets/imgs/Pictures/Ethnic(5).jpg" loading="lazy" alt="image">
                           <div class="slide-content"></div>
                           <h2 class="title-overlay" style="justify-content: center; text-align:center; margin-top:20px;">
                             Ethnic Fashion Shoots
@@ -423,7 +432,7 @@
                       </div>
                       <div class="swiper-slide">
                         <a target="_blank" href="/western-indo-western-shoot" class="swiper-carousel-animate-opacity">
-                          <img src="assets/imgs/Homeservice/Western.jpg" alt="image">
+                          <img src="assets/imgs/Homeservice/Western.jpg" loading="lazy" alt="image">
                           <div class="slide-content"></div>
                           <h2 class="title-overlay" style="justify-content: center; text-align:center; margin-top:20px;">
                             Western & Indo-Western Shoots
@@ -432,7 +441,7 @@
                       </div>
                       <a target="_blank" href="/designer-collections-shoot" class="swiper-slide">
                         <div class="swiper-carousel-animate-opacity">
-                          <img src="assets/imgs/Homeservice/DesignerCollection.jpg" alt="image">
+                          <img src="assets/imgs/Homeservice/DesignerCollection.jpg" loading="lazy" alt="image">
                           <div class="slide-content"></div>
                           <h2 class="title-overlay" style="justify-content: center; text-align:center; margin-top:20px;">
                             Designer Collection & Couture Shoots
@@ -441,7 +450,7 @@
                       </a>
                       <a target="_blank" href="/retail-catalogue-shoot" class="swiper-slide">
                         <div class="swiper-carousel-animate-opacity">
-                          <img src="assets/imgs/Homeservice/RetailCatShoot.jpg" alt="image">
+                          <img src="assets/imgs/Homeservice/RetailCatShoot.jpg" loading="lazy" alt="image">
                           <div class="slide-content"></div>
                           <h2 class="title-overlay" style="justify-content: center; text-align:center; margin-top:20px;">
                             Retail, Store & Catalogue Shoots
@@ -450,7 +459,7 @@
                       </a>
                       <a target="_blank" href="/brand-campaigns-editorials-shoot" class="swiper-slide">
                         <div class="swiper-carousel-animate-opacity" >
-                          <img  src="assets/imgs/Pictures/Brand Campaign(1).jpg" alt="image">
+                          <img  src="assets/imgs/Pictures/Brand Campaign(1).jpg" loading="lazy" alt="image">
                           <div class="slide-content"></div>
                           <h2 class="title-overlay" style="justify-content: center; text-align:center; margin-top:20px;">
                             Brand Identity & Concept Shoots
@@ -460,14 +469,14 @@
                     </div>
                   </div>
                   <div class="slider-nav overflow-hidden">
-                    <div class="portfolio-button-prev nav-icon has_fade_anim" data-fade-from="left" data-on-scroll="0" data-delay="0.30">
+                    <div class="portfolio-button-prev nav-icon " data-fade-from="left" data-on-scroll="0" data-delay="0.30">
                       <i class="fa-solid fa-angle-left"></i>Prev
                     </div>
-                    <div class="portfolio-button-next nav-icon has_fade_anim" data-fade-from="right" data-on-scroll="0" data-delay="0.30">
+                    <div class="portfolio-button-next nav-icon " data-fade-from="right" data-on-scroll="0" data-delay="0.30">
                       Next<i class=f"fa-solid fa-angle-right"></i>
                     </div>
                   </div>
-                  <div class="portfolio-pagination has_fade_anim" data-fade-from="bottom" data-fade-offset="0" data-on-scroll="0" data-delay="0.45"></div>
+                  <div class="portfolio-pagination " data-fade-from="bottom" data-fade-offset="0" data-on-scroll="0" data-delay="0.45"></div>
                 </div>
               </div>
             </div>
@@ -486,7 +495,7 @@
                 <div class="section-header">
                   <div class="section-title-wrapper">
                     <div class="title-wrapper">
-                      <h2 class="section-title has_fade_anim" data-fade-from="bottom" data-fade-offset="50">
+                      <h2 class="section-title " data-fade-from="bottom" data-fade-offset="50">
 Trusted by Leading Brands
                       </h2>
                     </div>
@@ -495,38 +504,41 @@ Trusted by Leading Brands
 
                 <div class="clients-logos marquee-container">
                   <div class="marquee-track">
-                    <img src="assets/imgs/cligo/Ashe.jpg" alt="Ashe">
-                    <img src="assets/imgs/cligo/Bharat.jpg" alt="Bharat">
-                    <img src="assets/imgs/cligo/iPAM.jpg" alt="iPAM" style="border-radius: 50%;">
-                    <img src="assets/imgs/cligo/Label Garry.jpg" alt="Label Garry">
-                    <img src="assets/imgs/cligo/VPM Coworking.jpg" alt="VPM Coworking" style="border-radius: 50%;">
-                    <img src="assets/imgs/cligo/VPM Garden Hall.jpg" alt="VPM Garden Hall">
-                    <img src="assets/imgs/cligo/Lahot Lifestyle.jpg" alt="Lahot Lifestyle">
-                    <img src="assets/imgs/cligo/Manjinder.png" alt="Manjinder">
-                    <img src="assets/imgs/cligo/Rampkiraani.jpg" alt="Rampkiraani">
-                    <img src="assets/imgs/cligo/Rare Penguin.jpg" alt="Rare Penguin">
-                    <img src="assets/imgs/cligo/rclosetboutique.png" alt="R Closet Boutique">
-                    <img src="assets/imgs/cligo/TaaniDesignz.jpg" alt="Taani Designz">
+                    <img src="assets/imgs/cligo/Ashe.jpg"loading="lazy"  alt="Ashe">
+                    <img src="assets/imgs/cligo/Bharat.jpg" loading="lazy" alt="Bharat">
+                    <img src="assets/imgs/cligo/iPAM.jpg" loading="lazy" alt="iPAM" style="border-radius: 50%;">
+                    <img src="assets/imgs/cligo/Label Garry.jpg" loading="lazy" alt="Label Garry">
+                    <img src="assets/imgs/cligo/VPM Coworking.jpg" loading="lazy" alt="VPM Coworking" style="border-radius: 50%;">
+                    <img src="assets/imgs/cligo/VPM Garden Hall.jpg" loading="lazy" alt="VPM Garden Hall">
+                    <img src="assets/imgs/cligo/Lahot Lifestyle.jpg" loading="lazy" alt="Lahot Lifestyle">
+                    <img src="assets/imgs/cligo/Manjinder.png" loading="lazy" alt="Manjinder">
+                    <img src="assets/imgs/cligo/Rampkiraani.jpg" loading="lazy" alt="Rampkiraani">
+                    <img src="assets/imgs/cligo/Rare Penguin.jpg" loading="lazy" alt="Rare Penguin">
+                    <img src="assets/imgs/cligo/rclosetboutique.png" loading="lazy" alt="R Closet Boutique">
+                    <img src="assets/imgs/cligo/TaaniDesignz.jpg" loading="lazy" alt="Taani Designz">
 
                     <!-- Duplicate for seamless loop -->
-                    <img src="assets/imgs/cligo/Ashe.jpg" alt="Ashe">
-                    <img src="assets/imgs/cligo/Bharat.jpg" alt="Bharat">
-                    <img src="assets/imgs/cligo/iPAM.jpg" alt="iPAM" style="border-radius: 50%;">
-                    <img src="assets/imgs/cligo/Label Garry.jpg" alt="Label Garry">
-                    <img src="assets/imgs/cligo/VPM Coworking.jpg" alt="VPM Coworking" style="border-radius: 50%;">
-                    <img src="assets/imgs/cligo/VPM Garden Hall.jpg" alt="VPM Garden Hall">
-                    <img src="assets/imgs/cligo/Lahot Lifestyle.jpg" alt="Lahot Lifestyle">
-                    <img src="assets/imgs/cligo/Manjinder.png" alt="Manjinder">
-                    <img src="assets/imgs/cligo/Rampkiraani.jpg" alt="Rampkiraani">
-                    <img src="assets/imgs/cligo/Rare Penguin.jpg" alt="Rare Penguin">
-                    <img src="assets/imgs/cligo/rclosetboutique.png" alt="R Closet Boutique">
-                    <img src="assets/imgs/cligo/TaaniDesignz.jpg" alt="Taani Designz">
+                    <img src="assets/imgs/cligo/Ashe.jpg" loading="lazy" alt="Ashe">
+                    <img src="assets/imgs/cligo/Bharat.jpg" loading="lazy" alt="Bharat">
+                    <img src="assets/imgs/cligo/iPAM.jpg" loading="lazy" alt="iPAM" style="border-radius: 50%;">
+                    <img src="assets/imgs/cligo/Label Garry.jpg" loading="lazy" alt="Label Garry">
+                    <img src="assets/imgs/cligo/VPM Coworking.jpg" loading="lazy" alt="VPM Coworking" style="border-radius: 50%;">
+                    <img src="assets/imgs/cligo/VPM Garden Hall.jpg" loading="lazy" alt="VPM Garden Hall">
+                    <img src="assets/imgs/cligo/Lahot Lifestyle.jpg" loading="lazy" alt="Lahot Lifestyle">
+                    <img src="assets/imgs/cligo/Manjinder.png" loading="lazy" alt="Manjinder">
+                    <img src="assets/imgs/cligo/Rampkiraani.jpg" loading="lazy" alt="Rampkiraani">
+                    <img src="assets/imgs/cligo/Rare Penguin.jpg" loading="lazy" alt="Rare Penguin">
+                    <img src="assets/imgs/cligo/rclosetboutique.png" loading="lazy" alt="R Closet Boutique">
+                    <img src="assets/imgs/cligo/TaaniDesignz.jpg" loading="lazy" alt="Taani Designz">
                   </div>
                 </div>
               </div>
             </div>
           </section>
           <!-- clients area end -->
+
+         
+
               <!-- team area start -->
           <section class="team-area">
             <div class="container large">
@@ -535,36 +547,35 @@ Trusted by Leading Brands
                   <div class="section-header">
                     <div class="section-title-wrapper">
                       <div class="title-wrapper">
-                        <h4 style="color: white; " class="section-title has_text_move_anim">
-                          Our team brings together creative excellence, fashion expertise, and a passion for delivering premium visual experiences.
-                        </h4>
+                        <h4 style="color: white; " class="section-title ">
+                         Built on Experience, Driven by Creative Excellence</h4>
                       </div>
                     </div>
                   </div>
 
                   <div class="section-content">
                     <div class="counter-wrapper-box">
-                      <div class="counter-wrapper has_fade_anim">
+                      <div class="counter-wrapper ">
                         <div class="team-count-box">
-                          <h3 class="number wc-counter">15<span>+</span></h3>
+                          <h3 class="number ">5<span>+</span></h3>
                           <h3 class="title">Years of <br> experience</h3>
                         </div>
                         <div class="team-count-box">
-                          <h3 class="number wc-counter">30<span>+</span></h3>
+                          <h3 class="number ">30<span>+</span></h3>
                           <h3 class="title">Happy <br> clients</h3>
                         </div>
                         <div class="team-count-box">
-                          <h3 class="number wc-counter">120<span>+</span></h3>
+                          <h3 class="number ">120<span>+</span></h3>
                           <h3 class="title">Projects <br> completed</h3>
                         </div>
                         <div class="team-count-box">
-                          <h3 class="number wc-counter">18</h3>
+                          <h3 class="number ">18</h3>
                           <h3 class="title">Creative <br> professionals</h3>
                         </div>
                       </div>
                     </div>
 
-                    <div class="content-last has_fade_anim">
+                    <div class="content-last ">
                       <h3 class="title">
                         <span>Creativity</span>
                         <span>Collaboration</span>
@@ -599,13 +610,13 @@ Trusted by Leading Brands
             <div class="container">
               <div class="about-area-inner section-spacing-top overflow-hidden">
                 <a target="_blank" class="" data-fade-from="bottom" data-fade-offset="50">
-                  <a target="_blank" href="/about" style="color: white; font-size: 7vw; font-weight: bolder;"> ABOUT US</a>
+                  <a target="_blank" href="/about" style="color: white; font-size: 8vw; font-weight: bolder;"> ABOUT US</a>
                 </a>
                 <div class="section-content">
                   <div class="section-thumb">
-                    <div class="about-thumb has_fade_anim" data-fade-from="top" data-ease="bounce" style="overflow:hidden;">
+                    <div class="about-thumb " data-fade-from="top" data-ease="bounce" style="overflow:hidden;">
                       <!-- <img class="show-light" src="assets/imgs/bghome/b8.png" alt="shape image" style="transition:transform 0.4s ease; transform-origin:center center;"> -->
-                      <video autoplay class="show-dark" src="assets/videos/aboutus.mp4" loop muted playsinline preload="auto" aria-label="About Us Video" style="width:100%; height:auto; object-fit:cover; transition:transform 0.4s ease; transform-origin:center center;">
+                      <video autoplay class="show-dark" src="assets/videos/aboutus.mp4" preload="none"  loop muted playsinline preload="auto" aria-label="About Us Video" style="width:100%; height:auto; object-fit:cover; transition:transform 0.4s ease; transform-origin:center center;">
                     </div>
                   </div>
                   <style>
@@ -615,8 +626,8 @@ Trusted by Leading Brands
                   <div class="content-last">
                     <div class="section-title-wrapper">
                       <div class="title-wrapper">
-                        <h2 class="has_text_move_anim" style="font-size: 300%;">
-                          Luxury Collection Shoots<br>For Stores, Showrooms, Campaigns, and Brand Platforms
+                        <h2 class="" style="font-size: 300%;">
+                          Luxury Collection Shoots<br> For Stores, Showrooms, Campaigns, and Brand Platforms
                         </h2>
                       </div>
                     </div>
@@ -647,7 +658,7 @@ Trusted by Leading Brands
 
 
 
-                    <div class="btn-wrapper has_fade_anim" data-fade-from="left">
+                    <div class="btn-wrapper " data-fade-from="left">
                       <a target="_blank" href="/about" class="wc-btn wc-btn-primary btn-text-flip mb-5">
                         <span data-text="Learn more">Learn more</span>
                         <i class="fa-solid fa-play"></i>
@@ -696,7 +707,7 @@ Trusted by Leading Brands
                 <div class="section-header" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
                   <div class="section-title-wrapper">
                     <div class="title-wrapper">
-                      <h2 class="large has_fade_anim" style="color: #caa437; font-size: 3.5rem; margin-bottom: 1rem;">
+                      <h2 class="large " style="color: #caa437; font-size: 3.5rem; margin-bottom: 1rem;">
                         Submit the form below to access curated plans and offerings
                       </h2>
                     </div>
@@ -706,7 +717,7 @@ Trusted by Leading Brands
 
                 <div class="section-content" style="display: flex; flex-wrap: wrap; gap: 60px; justify-content: center; margin-top: 60px; position: relative; z-index: 2;">
                   <!-- Left: Contact Info -->
-                  <div class="info-box has_fade_anim" style="flex: 1; min-width: 300px; max-width: 400px; color: white;">
+                  <div class="info-box " style="flex: 1; min-width: 300px; max-width: 400px; color: white;">
                     <div class="text-wrapper">
                       <p class="text" style="font-size: 1.2rem; margin-bottom: 2rem;">
                         We’d love to hear from you. Tell us how we can help bring your next visual campaign to life.
@@ -1294,7 +1305,9 @@ Trusted by Leading Brands
           </div>
         </footer> -->
         <!-- footer area end -->
-   <footer class="footer-area">
+    <!-- footer area start  -->
+        <footer class="footer-area">
+         
                                                              <style>
                                                               .footer-cta {
                                                                  display: grid;
@@ -1313,12 +1326,50 @@ Trusted by Leading Brands
                                                                 }
                                                                 
                                                                }
+                                                               .social-vertical {
+  position: fixed;
+  bottom: 138px;
+  display: flex;
+  justify-content: start;
+  gap: 14px;
+  z-index: 999;
+  left: 70%;
+}
+
+.social-vertical a {
+  width: 42px;
+  height: 42px;
+  background: #111;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.social-vertical a:hover {
+  background: #ff6a00;
+  transform: translateY(-4px);
+}
+
+/* Mobile handling */
+@media (max-width: 768px) {
+  .social-vertical {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
           </style>
           <div class="container">
             <div class="footer-area-inner  ">
               <div class="footer-cta">
                 <div class="footer-widget-wrapper">
-                  <h1 class="">Explore Exclusive Benefits</h1>
+                  <h2 class="explore">Explore Exclusive Benefits</h2>
                 </div>
                 <!-- <div class="footer-widget-wrapper">
                                     <h2 class="title"></h2>
@@ -1329,7 +1380,7 @@ Trusted by Leading Brands
                 <div class="footer-widget-wrapper newsletter">
                   <form action="/book-demo" method="post" class="subscribe-form" id="subscribeForm">
                     <div class="input-field">
-                      <input type="tel" name="mobile" id="subscribeMobile" placeholder="Enter your mobile number"
+                      <input type="tel" name="mobile" id="subscribeMobile" style="font-size: 16px;" placeholder="Enter your mobile number"
                         maxlength="10" inputmode="numeric" required>
 
                       <button type="submit" class="subscribe-btn">
@@ -1386,6 +1437,20 @@ Trusted by Leading Brands
                       }
                     });
                   </script>
+                   <div class="social-vertical mb-3">
+  <a href="https://www.instagram.com/golden.apple.productions/" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+    <i class="fa-brands fa-twitter"></i>
+  </a>
+  <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+</div>
                 </div>
               </div>
             </div>
@@ -1404,34 +1469,39 @@ Trusted by Leading Brands
                   <li><a target="_blank" href="/ourwork">Our Work</a></li>
                   <li><a target="_blank" href="/blogs">Blogs</a></li>
                   <li><a target="_blank" href="/contact">Contact</a></li>
-                  <li><a target="_blank" href="/terms">T & C</a></li>
+                  <li><a target="_blank" href="/Terms&Conditions">T & C</a></li>
                   <li><a target="_blank" href="/PrivacyPolicy">Privacy Policy</a></li>
                 </ul>
               </div>
             </div>
+            <!-- Social Media Vertical Icons -->
+
+
           </div>
         </footer>
+        <!-- footer area end  -->
       </div>
     </div>
   </div>
 
-  <!-- All JS files -->
-  <script src="assets/js/jquery-3.6.0.min.js"></script>
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/counter.js"></script>
-  <script src="assets/js/progressbar.js"></script>
-  <script src="assets/js/gsap.min.js"></script>
-  <script src="assets/js/ScrollSmoother.min.js"></script>
-  <script src="assets/js/ScrollToPlugin.min.js"></script>
-  <script src="assets/js/ScrollTrigger.min.js"></script>
-  <script src="assets/js/SplitText.min.js"></script>
-  <script src="assets/js/jquery.meanmenu.min.js"></script>
-  <script src="assets/js/backToTop.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/error-handling.js"></script>
-  <script src="assets/js/offcanvas.js"></script>
+  <!-- All JS files (deferred) -->
+<script src="assets/js/jquery-3.6.0.min.js" defer></script>
+<script src="assets/js/bootstrap.bundle.min.js" defer></script>
+<script src="assets/js/jquery.magnific-popup.min.js" defer></script>
+<script src="assets/js/swiper-bundle.min.js" defer></script>
+<script src="assets/js/counter.js" defer></script>
+<script src="assets/js/progressbar.js" defer></script>
+<script src="assets/js/gsap.min.js" defer></script>
+<script src="assets/js/ScrollSmoother.min.js" defer></script>
+<script src="assets/js/ScrollToPlugin.min.js" defer></script>
+<script src="assets/js/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/SplitText.min.js" defer></script>
+<script src="assets/js/jquery.meanmenu.min.js" defer></script>
+<script src="assets/js/backToTop.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/error-handling.js" defer></script>
+<script src="assets/js/offcanvas.js" defer></script>
+
 
   <script>
     // text slider 
@@ -1560,8 +1630,8 @@ Trusted by Leading Brands
   </script>
 
   <!-- Swiper Core + Effect Carousel -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <script src="assets/js/effect-carousel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer ></script>
+  <script src="assets/js/effect-carousel.min.js" defer ></script>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {

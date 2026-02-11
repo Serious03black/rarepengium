@@ -338,101 +338,9 @@ body.dark h3 {
         </main>
 
         <!-- footer area start  -->
-       <footer class="footer-area">
-                    <div class="container">
-                        <div class="footer-area-inner  ">
-
-                            <div class="footer-cta">
-                                <div class="footer-widget-wrapper">
-                                    <h2 class="title">Explore Exclusive Benefits</h2>
-                                    
-                                </div>
-                                <div class="footer-widget-wrapper">
-                                    <h2 class="title"></h2>
-                                    <ul class="footer-nav-list">
-                                       
-                                    </ul>
-                                </div>
-                                <div class="footer-widget-wrapper newsletter">
-                                     <form action="/book-demo" method="post" class="subscribe-form" id="subscribeForm">
-  <div class="input-field">
-    <input
-      type="tel"
-      name="mobile"
-      id="subscribeMobile"
-      placeholder="Enter your mobile number"
-      maxlength="10"
-      inputmode="numeric"
-      required
-    >
-
-    <button type="submit" class="subscribe-btn">
-      <img src="/assets/imgs/icon/arrow-light.webp" alt="icon">
-    </button>
-  </div>
-
-  <p id="subscribeError" style="color:red;font-size:13px;display:none;"></p>
-  <p id="subscribeSuccess" style="color:green;font-size:13px;display:none;"></p>
-</form>
-<script>
-  const form = document.getElementById("subscribeForm");
-  const mobileInput = document.getElementById("subscribeMobile");
-  const errorEl = document.getElementById("subscribeError");
-  const successEl = document.getElementById("subscribeSuccess");
-
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault(); // stop default form submit
-
-    const mobile = mobileInput.value.trim();
-
-    errorEl.style.display = "none";
-    successEl.style.display = "none";
-
-    // ✅ SIMPLE validation: number + 10 digits only
-    if (!/^[6-9]\d{9}$/.test(mobile)) {
-      errorEl.innerText = "Enter valid 10 digit mobile number";
-      errorEl.style.display = "block";
-      return;
-    }
-
-    try {
-      const res = await fetch(form.action, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ mobile })
-      });
-
-      const data = await res.json();
-
-      if (!res.ok) {
-        throw new Error(data.error || "Submission failed");
-      }
-
-      // ✅ success from backend
-      successEl.innerText = data.message || "Submitted successfully";
-      successEl.style.display = "block";
-      mobileInput.value = "";
-
-    } catch (err) {
-      errorEl.innerText = err.message || "Server error";
-      errorEl.style.display = "block";
-    }
-  });
-</script>
-<style>
-  .copyright-area-inne {
-    display: flex;
-    /* gap: 20px 60px; */
-    justify-content: space-between;
-    align-items: center;
-    padding: 51px 0;
-    border-top: 1px solid rgba(255, 255, 255, .08);
-}
-
-</style>
-   <style>
+        <footer class="footer-area">
+         
+                                                             <style>
                                                               .footer-cta {
                                                                  display: grid;
                                                                  grid-template-columns: 2fr 1.8fr ;
@@ -450,31 +358,159 @@ body.dark h3 {
                                                                 }
                                                                 
                                                                }
+                                                               .social-vertical {
+  position: fixed;
+  bottom: 138px;
+  display: flex;
+  justify-content: start;
+  gap: 14px;
+  z-index: 999;
+  left: 70%;
+}
+
+.social-vertical a {
+  width: 42px;
+  height: 42px;
+  background: #111;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.social-vertical a:hover {
+  background: #ff6a00;
+  transform: translateY(-4px);
+}
+
+/* Mobile handling */
+@media (max-width: 768px) {
+  .social-vertical {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
           </style>
-                                </div>
-                            </div>
-                        </div>
+          <div class="container">
+            <div class="footer-area-inner  ">
+              <div class="footer-cta">
+                <div class="footer-widget-wrapper">
+                  <h2 class="explore">Explore Exclusive Benefits</h2>
+                </div>
+                <!-- <div class="footer-widget-wrapper">
+                                    <h2 class="title"></h2>
+                                    <ul class="footer-nav-list">
+                                       
+                                    </ul>
+                                </div> -->
+                <div class="footer-widget-wrapper newsletter">
+                  <form action="/book-demo" method="post" class="subscribe-form" id="subscribeForm">
+                    <div class="input-field">
+                      <input type="tel" name="mobile" id="subscribeMobile" style="font-size: 16px;" placeholder="Enter your mobile number"
+                        maxlength="10" inputmode="numeric" required>
+
+                      <button type="submit" class="subscribe-btn">
+                        <img src="/assets/imgs/icon/arrow-light.webp" alt="icon">
+                      </button>
                     </div>
-                    <div class="copyright-area">
-                        <div class="container">
-                            <div class="copyright-area-inne">
-                                <div class="copyright-text">
-                                    <p class="text">© 2026 – 2027  | All Rights reserved <br>
-                                        Golden Apple Productions
-                                </div>
-                                <ul class="footer-nav-list">
-                                    <li><a target="_blank" href="/">Home</a></li>
-                                    <li><a target="_blank" href="/about">About</a></li>
-                                    <li><a target="_blank" href="/services">Services</a></li>
-                                    <li><a target="_blank" href="/ourwork">Our Work</a></li>
-                                    <li><a target="_blank" href="/blogs">Blogs</a></li>
-                                    <li><a target="_blank" href="/contact">Contact</a></li>
-<li><a target="_blank" href="/Terms&Conditions">T & C</a></li>
-                <li><a target="_blank" href="/PrivacyPolicy">Privacy Policy</a></li>                                  </ul>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+                    <p id="subscribeError" style="color:red;font-size:13px;display:none;"></p>
+                    <p id="subscribeSuccess" style="color:green;font-size:13px;display:none;"></p>
+                  </form>
+                  <script>
+                    const form = document.getElementById("subscribeForm");
+                    const mobileInput = document.getElementById("subscribeMobile");
+                    const errorEl = document.getElementById("subscribeError");
+                    const successEl = document.getElementById("subscribeSuccess");
+
+                    form.addEventListener("submit", async function (e) {
+                      e.preventDefault(); // stop default form submit
+
+                      const mobile = mobileInput.value.trim();
+
+                      errorEl.style.display = "none";
+                      successEl.style.display = "none";
+
+                      // ✅ SIMPLE validation: number + 10 digits only
+                      if (!/^[6-9]\d{9}$/.test(mobile)) {
+                        errorEl.innerText = "Enter valid 10 digit mobile number";
+                        errorEl.style.display = "block";
+                        return;
+                      }
+
+                      try {
+                        const res = await fetch(form.action, {
+                          method: "POST",
+                          headers: {
+                            "Content-Type": "application/json"
+                          },
+                          body: JSON.stringify({ mobile })
+                        });
+
+                        const data = await res.json();
+
+                        if (!res.ok) {
+                          throw new Error(data.error || "Submission failed");
+                        }
+
+                        // ✅ success from backend
+                        successEl.innerText = data.message || "Submitted successfully";
+                        successEl.style.display = "block";
+                        mobileInput.value = "";
+
+                      } catch (err) {
+                        errorEl.innerText = err.message || "Server error";
+                        errorEl.style.display = "block";
+                      }
+                    });
+                  </script>
+                   <div class="social-vertical mb-2">
+  <a href="https://www.instagram.com/golden.apple.productions/" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+    <i class="fa-brands fa-twitter"></i>
+  </a>
+  <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="copyright-area">
+            <div class="container">
+              <div class="copyright-area-inner">
+                <div class="copyright-text">
+                  <p class="text">© 2026 – 2027 | All Rights reserved <br>
+                    Golden Apple Productions
+                </div>
+                <ul class="footer-nav-list">
+                  <li><a target="_blank" href="/">Home</a></li>
+                  <li><a target="_blank" href="/about">About</a></li>
+                  <li><a target="_blank" href="/services">Services</a></li>
+                  <li><a target="_blank" href="/ourwork">Our Work</a></li>
+                  <li><a target="_blank" href="/blogs">Blogs</a></li>
+                  <li><a target="_blank" href="/contact">Contact</a></li>
+                  <li><a target="_blank" href="/Terms&Conditions">T & C</a></li>
+                  <li><a target="_blank" href="/PrivacyPolicy">Privacy Policy</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Social Media Vertical Icons -->
+
+
+          </div>
+        </footer>
         <!-- footer area end  -->
 
       </div>

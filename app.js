@@ -227,16 +227,22 @@ app.post("/contact", ensureDBConnected, async (req, res) => {
     console.log("New contact saved:", { name, email, budget: finalBudget });
 
     // Your beautiful thank-you HTML (unchanged)
-    return res.send(`<!DOCTYPE html>
+   return res.send(`<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Thank You - Golden Apple Productions</title>
+
+<!-- Font Awesome CDN for WhatsApp -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
 </head>
 <body style="margin:0;padding:0;height:100vh;background:#000;color:#caa437;font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;display:flex;align-items:center;justify-content:center;overflow:hidden">
+
   <!-- Floating WhatsApp & Call Buttons -->
-  <div style="background-color:white; position:fixed; bottom:30px; right:30px; display:flex; flex-direction:column; gap:15px; z-index:1000;">
+  <div style="position:fixed; bottom:30px; right:30px; display:flex; flex-direction:column; gap:15px; z-index:1000;">
+    
     <a target="_blank" href="https://wa.me/917300031017" aria-label="WhatsApp Chat" style="
       width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center;
       background:#22ae06; color:#000; box-shadow:0 6px 20px rgba(0,0,0,0.4); text-decoration:none;
@@ -254,25 +260,76 @@ app.post("/contact", ensureDBConnected, async (req, res) => {
       </svg>
     </a>
   </div>
+
 <div id="particles" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none"></div>
+
 <div style="text-align:center;padding:40px;position:relative;">
   <svg viewBox="0 0 1000 300" style="width:90%;max-width:900px;margin-bottom:40px;">
-    <defs><linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#f0d48a"/><stop offset="50%" stop-color="#caa437"/><stop offset="100%" stop-color="#f0d48a"/></linearGradient></defs>
-    <text x="500" y="180" font-family="Brush Script MT,cursive" font-size="140" fill="url(#goldGradient)" text-anchor="middle" style="filter:drop-shadow(0 0 20px rgba(202,164,55,0.6));">Thank You</text>
+    <defs>
+      <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#f0d48a"/>
+        <stop offset="50%" stop-color="#caa437"/>
+        <stop offset="100%" stop-color="#f0d48a"/>
+      </linearGradient>
+    </defs>
+    <text x="500" y="180" font-family="Brush Script MT,cursive" font-size="140" fill="url(#goldGradient)" text-anchor="middle" style="filter:drop-shadow(0 0 20px rgba(202,164,55,0.6));">
+      Thank You
+    </text>
   </svg>
-  <h2 style="font-size:1.8rem;margin:30px 0;color:#caa437;">Your message has been sent successfully!</h2>
-  <p style="font-size:1.3rem;max-width:700px;margin:0 auto 40px;opacity:0.85;line-height:1.6;">We truly appreciate you reaching out to Golden Apple Productions.<br>Our team will review your Enquiry and get back to you as soon as possible.</p>
-  <a href="/" style="display:inline-block;background:#caa437;color:#000;font-weight:bold;padding:14px 32px;border-radius:50px;text-decoration:none;font-size:1.1rem;margin-bottom:40px;transition:all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 10px 30px rgba(202,164,55,0.4)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">← Back to Home</a>
+
+  <h2 style="font-size:1.8rem;margin:30px 0;color:#caa437;">
+    Your message has been sent successfully!
+  </h2>
+
+  <p style="font-size:1.3rem;max-width:700px;margin:0 auto 40px;opacity:0.85;line-height:1.6;">
+    We truly appreciate you reaching out to Golden Apple Productions.<br>
+    Our team will review your Enquiry and get back to you as soon as possible.
+  </p>
+
+  <a href="/" style="display:inline-block;background:#caa437;color:#000;font-weight:bold;padding:14px 32px;border-radius:50px;text-decoration:none;font-size:1.1rem;margin-bottom:40px;transition:all 0.3s ease;"
+     onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 10px 30px rgba(202,164,55,0.4)'"
+     onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+     ← Back to Home
+  </a>
+
   <div style="margin-top:30px;">
-    <a href="https://www.instagram.com/golden.apple.productions/" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:14px;color:#caa437;text-decoration:none;font-size:1.4rem;transition:all 0.3s ease;" onmouseover="this.style.color='#f0d48a';this.style.transform='translateY(-3px)'" onmouseout="this.style.color='#caa437';this.style.transform='none'">
-      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><circle cx="12" cy="12" r="4"></circle><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+    <a href="https://www.instagram.com/golden.apple.productions/" target="_blank"
+       style="display:flex;align-items:center;justify-content:center;gap:14px;color:#caa437;text-decoration:none;font-size:1.4rem;transition:all 0.3s ease;"
+       onmouseover="this.style.color='#f0d48a';this.style.transform='translateY(-3px)'"
+       onmouseout="this.style.color='#caa437';this.style.transform='none'">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+        <circle cx="12" cy="12" r="4"></circle>
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+      </svg>
       <span>golden.apple.productions</span>
     </a>
   </div>
 </div>
-<script>const particles=document.getElementById('particles');function createParticle(){const p=document.createElement('div');p.style.position='absolute';p.style.width=Math.random()*6+4+'px';p.style.height=p.style.width;p.style.background='#caa437';p.style.borderRadius='50%';p.style.left=Math.random()*100+'vw';p.style.top='100vh';p.style.opacity='0.8';p.style.transition='transform 4s ease-out, opacity 4s';particles.appendChild(p);setTimeout(()=>{p.style.transform='translateY(-110vh)';p.style.opacity='0'},50);setTimeout(()=>p.remove(),5000);}setInterval(createParticle,300);</script>
+
+<script>
+const particles=document.getElementById('particles');
+function createParticle(){
+  const p=document.createElement('div');
+  p.style.position='absolute';
+  p.style.width=Math.random()*6+4+'px';
+  p.style.height=p.style.width;
+  p.style.background='#caa437';
+  p.style.borderRadius='50%';
+  p.style.left=Math.random()*100+'vw';
+  p.style.top='100vh';
+  p.style.opacity='0.8';
+  p.style.transition='transform 4s ease-out, opacity 4s';
+  particles.appendChild(p);
+  setTimeout(()=>{p.style.transform='translateY(-110vh)';p.style.opacity='0'},50);
+  setTimeout(()=>p.remove(),5000);
+}
+setInterval(createParticle,300);
+</script>
+
 </body>
 </html>`);
+
   } catch (err) {
     console.error("CONTACT FORM ERROR:", err);
     return res.redirect("/#contact");

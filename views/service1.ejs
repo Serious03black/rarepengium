@@ -58,7 +58,7 @@
             d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
         </svg>
       </a>
-    </div>ass="fa-brands fa-whatsapp"></i>
+    </div>
   </a>
   <!-- Preloader -->
   <div id="preloader">
@@ -456,7 +456,8 @@
           <!-- service details area end  -->
         </main>
         <!-- footer area start  -->
-       <footer class="footer-area">
+        <footer class="footer-area">
+         
                                                              <style>
                                                               .footer-cta {
                                                                  display: grid;
@@ -475,12 +476,50 @@
                                                                 }
                                                                 
                                                                }
+                                                               .social-vertical {
+  position: fixed;
+  bottom: 138px;
+  display: flex;
+  justify-content: start;
+  gap: 14px;
+  z-index: 999;
+  left: 70%;
+}
+
+.social-vertical a {
+  width: 42px;
+  height: 42px;
+  background: #111;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.social-vertical a:hover {
+  background: #ff6a00;
+  transform: translateY(-4px);
+}
+
+/* Mobile handling */
+@media (max-width: 768px) {
+  .social-vertical {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
           </style>
           <div class="container">
             <div class="footer-area-inner  ">
               <div class="footer-cta">
                 <div class="footer-widget-wrapper">
-                  <h1 class="">Explore Exclusive Benefits</h1>
+                  <h2 class="explore">Explore Exclusive Benefits</h2>
                 </div>
                 <!-- <div class="footer-widget-wrapper">
                                     <h2 class="title"></h2>
@@ -491,7 +530,7 @@
                 <div class="footer-widget-wrapper newsletter">
                   <form action="/book-demo" method="post" class="subscribe-form" id="subscribeForm">
                     <div class="input-field">
-                      <input type="tel" name="mobile" id="subscribeMobile" placeholder="Enter your mobile number"
+                      <input type="tel" name="mobile" id="subscribeMobile" style="font-size: 16px;" placeholder="Enter your mobile number"
                         maxlength="10" inputmode="numeric" required>
 
                       <button type="submit" class="subscribe-btn">
@@ -548,6 +587,20 @@
                       }
                     });
                   </script>
+                   <div class="social-vertical mb-3">
+  <a href="https://www.instagram.com/golden.apple.productions/" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+    <i class="fa-brands fa-twitter"></i>
+  </a>
+  <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+</div>
                 </div>
               </div>
             </div>
@@ -571,6 +624,9 @@
                 </ul>
               </div>
             </div>
+            <!-- Social Media Vertical Icons -->
+
+
           </div>
         </footer>
         <!-- footer area end  -->

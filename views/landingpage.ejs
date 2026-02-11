@@ -856,39 +856,7 @@
       <img src="/assets/imgs/Pictures/Brand Campaign & Edit..jpg" alt="Brand Campaign">
     </div>
     
-    <div class="result-area">
-      <div class="container">
-        <div class="result-area-inner">
-          <div class="section-content">
-            <h2 class="title">Results & Metrics</h2>
-            <p class="description">
-              We deliver high-end fashion production powered by a curated creative team on demand.
-              Our success is measured by long-term partnerships—when brands return to collaborate again.
-              From concept to execution, we build, produce, and scale visual campaigns efficiently.
-              Strong visual hierarchy and storytelling guide audience attention, enhance brand recall,
-              and drive meaningful engagement across platforms—resulting in higher conversions and repeat value.
-            </p>
-          </div>
-
-          <div class="results-wrapper">
-            <div class="result-box">
-              <span class="number">40+</span>
-              <p>Fashion shoots and brand projects executed annually.</p>
-            </div>
-
-            <div class="result-box">
-              <span class="number">72%</span>
-              <p>Audience engagement driven through mobile-first visual content.</p>
-            </div>
-
-            <div class="result-box">
-              <span class="number">160%</span>
-              <p>Increase in brand visibility and campaign reach for repeat clients.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  
     <style>
       /* IMAGE */
       .image-wrapper {
@@ -1117,7 +1085,8 @@
 
 
     <!-- footer area start  -->
-     <footer class="footer-area">
+        <footer class="footer-area">
+         
                                                              <style>
                                                               .footer-cta {
                                                                  display: grid;
@@ -1136,15 +1105,50 @@
                                                                 }
                                                                 
                                                                }
-                                                               .copyright-area-inner {
-    gap: 20px 39px !important;
+                                                               .social-vertical {
+  position: fixed;
+  bottom: 138px;
+  display: flex;
+  justify-content: start;
+  gap: 14px;
+  z-index: 999;
+  left: 70%;
 }
+
+.social-vertical a {
+  width: 42px;
+  height: 42px;
+  background: #111;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.social-vertical a:hover {
+  background: #ff6a00;
+  transform: translateY(-4px);
+}
+
+/* Mobile handling */
+@media (max-width: 768px) {
+  .social-vertical {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
           </style>
           <div class="container">
             <div class="footer-area-inner  ">
               <div class="footer-cta">
                 <div class="footer-widget-wrapper">
-                  <h1 style="color: #caa437;" class="">Explore Exclusive Benefits</h1>
+                  <h2 class="explore">Explore Exclusive Benefits</h2>
                 </div>
                 <!-- <div class="footer-widget-wrapper">
                                     <h2 class="title"></h2>
@@ -1155,7 +1159,7 @@
                 <div class="footer-widget-wrapper newsletter">
                   <form action="/book-demo" method="post" class="subscribe-form" id="subscribeForm">
                     <div class="input-field">
-                      <input type="tel" name="mobile" id="subscribeMobile" placeholder="Enter your mobile number"
+                      <input type="tel" name="mobile" id="subscribeMobile" style="font-size: 16px;" placeholder="Enter your mobile number"
                         maxlength="10" inputmode="numeric" required>
 
                       <button type="submit" class="subscribe-btn">
@@ -1212,6 +1216,20 @@
                       }
                     });
                   </script>
+                   <div class="social-vertical mb-3">
+  <a href="https://www.instagram.com/golden.apple.productions/" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+    <i class="fa-brands fa-twitter"></i>
+  </a>
+  <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+</div>
                 </div>
               </div>
             </div>
@@ -1235,9 +1253,12 @@
                 </ul>
               </div>
             </div>
+            <!-- Social Media Vertical Icons -->
+
+
           </div>
         </footer>
-    <!-- footer area end  -->
+        <!-- footer area end  -->
 
   </div>
 </div>
