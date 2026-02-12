@@ -244,7 +244,7 @@ app.post("/contact", ensureDBConnected, async (req, res) => {
   <div style="position:fixed; bottom:30px; right:30px; display:flex; flex-direction:column; gap:15px; z-index:1000;">
     
     <a target="_blank" href="https://wa.me/917300031017" aria-label="WhatsApp Chat" style="
-      width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    color:white;   width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center;
       background:#22ae06; color:#000; box-shadow:0 6px 20px rgba(0,0,0,0.4); text-decoration:none;
       transition:all 0.3s ease; font-size:30px;"
       onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 28px rgba(0,0,0,0.45)'"
