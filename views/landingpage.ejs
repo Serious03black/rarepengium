@@ -15,7 +15,14 @@
 
 
 
-
+ <!-- All CSS files -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/progressbar.css">
+  <link rel="stylesheet" href="assets/css/meanmenu.min.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/master-about.css">
   <!-- All CSS files -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/all.min.css">
@@ -233,147 +240,243 @@
       <div class="overlay-switcher-close"></div>
 
       <main>
-        <!-- contact area start  -->
-<section class="contact-area mt-5">
+          <section class="clients-area">
+            <div class="container">
+              <div class="clinets-area-inner section-spacing-top">
+                <div class="section-header">
+                  <div class="section-title-wrapper">
+                    <div class="title-wrapper">
+                      <h2 class="section-title " data-fade-from="bottom" data-fade-offset="50">
+Trusted by Leading Brands
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="clients-logos marquee-container">
+                  <div class="marquee-track">
+                    <img src="assets/imgs/cligo/Ashe.jpg"loading="lazy"  alt="Ashe">
+                    <img src="assets/imgs/cligo/Bharat.jpg" loading="lazy" alt="Bharat">
+                    <img src="assets/imgs/cligo/iPAM.jpg" loading="lazy" alt="iPAM" style="border-radius: 50%;">
+                    <img src="assets/imgs/cligo/Label Garry.jpg" loading="lazy" alt="Label Garry">
+                    <img src="assets/imgs/cligo/VPM Coworking.jpg" loading="lazy" alt="VPM Coworking" style="border-radius: 50%;">
+                    <img src="assets/imgs/cligo/VPM Garden Hall.jpg" loading="lazy" alt="VPM Garden Hall">
+                    <img src="assets/imgs/cligo/Lahot Lifestyle.jpg" loading="lazy" alt="Lahot Lifestyle">
+                    <img src="assets/imgs/cligo/Manjinder.png" loading="lazy" alt="Manjinder">
+                    <img src="assets/imgs/cligo/Rampkiraani.jpg" loading="lazy" alt="Rampkiraani">
+                    <img src="assets/imgs/cligo/Rare Penguin.jpg" loading="lazy" alt="Rare Penguin">
+                    <img src="assets/imgs/cligo/rclosetboutique.png" loading="lazy" alt="R Closet Boutique">
+                    <img src="assets/imgs/cligo/TaaniDesignz.jpg" loading="lazy" alt="Taani Designz">
+
+                    <!-- Duplicate for seamless loop -->
+                    <img src="assets/imgs/cligo/Ashe.jpg" loading="lazy" alt="Ashe">
+                    <img src="assets/imgs/cligo/Bharat.jpg" loading="lazy" alt="Bharat">
+                    <img src="assets/imgs/cligo/iPAM.jpg" loading="lazy" alt="iPAM" style="border-radius: 50%;">
+                    <img src="assets/imgs/cligo/Label Garry.jpg" loading="lazy" alt="Label Garry">
+                    <img src="assets/imgs/cligo/VPM Coworking.jpg" loading="lazy" alt="VPM Coworking" style="border-radius: 50%;">
+                    <img src="assets/imgs/cligo/VPM Garden Hall.jpg" loading="lazy" alt="VPM Garden Hall">
+                    <img src="assets/imgs/cligo/Lahot Lifestyle.jpg" loading="lazy" alt="Lahot Lifestyle">
+                    <img src="assets/imgs/cligo/Manjinder.png" loading="lazy" alt="Manjinder">
+                    <img src="assets/imgs/cligo/Rampkiraani.jpg" loading="lazy" alt="Rampkiraani">
+                    <img src="assets/imgs/cligo/Rare Penguin.jpg" loading="lazy" alt="Rare Penguin">
+                    <img src="assets/imgs/cligo/rclosetboutique.png" loading="lazy" alt="R Closet Boutique">
+                    <img src="assets/imgs/cligo/TaaniDesignz.jpg" loading="lazy" alt="Taani Designz">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+            <style>
+            .clients-logos.marquee-container {
+              overflow: hidden;
+              padding: 40px 0;
+              white-space: nowrap;
+              position: relative;
+            }
+
+            .marquee-track {
+              display: inline-flex;
+              align-items: center;
+              animation: scroll-logos 40s linear infinite;
+              gap: 60px;
+            }
+
+            .marquee-track img {
+              height: 144px;
+              max-width: none;
+              flex-shrink: 0;
+              object-fit: contain;
+            }
+
+            .clients-logos.marquee-container:hover .marquee-track {
+              animation-play-state: paused;
+            }
+
+            @keyframes scroll-logos {
+              0% {
+                transform: translateX(0);
+              }
+
+              100% {
+                transform: translateX(-50%);
+              }
+            }
+
+            .clients-logos.marquee-container::before,
+            .clients-logos.marquee-container::after {
+              content: '';
+              position: absolute;
+              top: 0;
+              width: 150px;
+              height: 100%;
+              z-index: 1;
+              pointer-events: none;
+            }
+
+            .clients-logos.marquee-container::before {
+              left: 0;
+            }
+
+            .clients-logos.marquee-container::after {
+              right: 0;
+            }
+          </style>
+                <!-- testimonial area start  -->
+            <div class="testimonial-area has_fade_anim">
   <div class="container">
-    <div class="contact-area-inner section-spacing">
-      <div class="">
-        <div class="section">
-          <div class="title">
-            <h2 class="" style="color: #caa437; width: 100%;font-size: 1000;">Submit the form below to access curated plans and offerings
+    <div class="testimonial-area-inner section-spacing">
+      <div class="testimonial-wrapper-box">
+        <div class="testimonial-wrapper">
+          <div class="swiper testimonial-slider">
+            <div class="swiper-wrapper">
+
+              <!-- Testimonial 1 -->
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <div class="content">
+                    <div class="icon">
+                      <img class="quote-icon show-light" src="assets/imgs/icon/quote-5.webp" alt="Quote Icon">
+                      <img class="quote-icon show-dark" src="assets/imgs/icon/quote-5-light.webp" alt="Quote Icon">
+                    </div>
+                    <div class="text-wrapper">
+                      <p class="text">
+                        Golden Apple Productions felt like an extension of our
+                        own creative team. From concept to final delivery, the
+                        execution was seamless and visually impactful. Their
+                        understanding of fashion storytelling truly elevated
+                        our campaign.
+                      </p>
+                    </div>
+                    <div class="author">
+                      <div class="meta">
+                        <span class="name">Ananya Verma, </span>
+                        <span class="post">Fashion Brand Founder</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Testimonial 2 -->
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <div class="content">
+                    <div class="icon">
+                      <img class="quote-icon show-light" src="assets/imgs/icon/quote-5.webp" alt="Quote Icon">
+                      <img class="quote-icon show-dark" src="assets/imgs/icon/quote-5-light.webp" alt="Quote Icon">
+                    </div>
+                    <div class="text-wrapper">
+                      <p class="text">
+                        Working with GAP was a smooth and professional
+                        experience. The team handled everything in-house, from
+                        talent coordination to post-production, allowing us to
+                        focus fully on the creative direction.
+                      </p>
+                    </div>
+                    <div class="author">
+                      <div class="meta">
+                        <span class="name">Rohit Mehta, </span>
+                        <span class="post">Creative Director</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Testimonial 3 -->
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <div class="content">
+                    <div class="icon">
+                      <img class="quote-icon show-light" src="assets/imgs/icon/quote-5.webp" alt="Quote Icon">
+                      <img class="quote-icon show-dark" src="assets/imgs/icon/quote-5-light.webp" alt="Quote Icon">
+                    </div>
+                    <div class="text-wrapper">
+                      <p class="text">
+                        The level of styling, production quality, and attention
+                        to detail delivered by Golden Apple Productions exceeded
+                        our expectations. Their visuals helped us present our
+                        collection confidently across digital platforms.
+                      </p>
+                    </div>
+                    <div class="author">
+                      <div class="meta">
+                        <span class="name">Nisha Kapoor, </span>
+                        <span class="post">Designer & Label Owner</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Testimonial 4 -->
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <div class="content">
+                    <div class="icon">
+                      <img class="quote-icon show-light" src="" alt="Quote Icon">
+                      <img class="quote-icon show-dark" src="assets/imgs/icon/quote-5-light.webp" alt="Quote Icon">
+                    </div>
+                    <div class="text-wrapper">
+                      <p class="text">
+                        Golden Apple Productions brings structure, creativity,
+                        and efficiency together. Their team delivered a strong
+                        visual narrative that aligned perfectly with our brand
+                        goals, making the collaboration truly rewarding.
+                      </p>
+                    </div>
+                    <div class="author">
+                      <div class="meta">
+                        <span class="name">Arjun Malhotra, </span>
+                        <span class="post">Brand Marketing Lead</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="section-content" style="display: flex; flex-direction: row; flex-wrap: wrap; gap:10%; justify-content: center !important;;">
-
-        <!-- Left side - Video iframe (bilkul same rakha) -->
-        <div class="info-box has_fade_anim" style="
-          display:flex;
-          justify-content:flex-start;
-          align-items:flex-start;
-          padding:5px;
-          margin:5px;
-        ">
-          <div style="
-            width:360px;
-            height:640px;
-            border-radius:18px;
-            overflow:hidden;
-            background:#000;
-            box-shadow:0 15px 40px rgba(0,0,0,0.4);
-            margin-top:0;
-            margin-bottom: 10px;
-          ">
-            <iframe src="https://www.youtube.com/embed/wAmoFjj-9Es?controls=0&modestbranding=1&playsinline=1"
-              style="
-                width:100%;
-                height:100%;
-                border:none;
-                display:block;
-                object-fit:cover;
-              " 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
+        <!-- Slider Navigation -->
+        <div class="slider-nav">
+          <div class="testimonial-button-prev nav-icon">
+            <img class="show-light" src="assets/imgs/icon/angle-left.webp" alt="icon">
+            <img class="show-dark" src="assets/imgs/icon/angle-left-light.webp" alt="icon">
           </div>
-        </div>
-
-        <!-- Right side - Updated Multi-step Form -->
-        <div class="contact-wrap has_fade_anim" data-delay="0.30" style="flex: 1; min-width: 350px; max-width: 550px;">
-
-       <div class="form-container">
-
-    <h2>Enquiry Form
-</h2>
-
-    <div class="steps-indicator">
-      <div class="step-dot active" id="dot1"></div>
-      <div class="step-dot" id="dot2"></div>
-    </div>
-
-  <form class="glass-form" action="/contact" method="POST" id="contactForm" novalidate>
-
-    <!-- Progress Dots -->
-    <div class="step-dots">
-      <span id="dot1" class="dot active"></span>
-      <span id="dot2" class="dot"></span>
-    </div>
-
-    <!-- Step 1 -->
-          <div class="step step-1" id="step1">
-      <div class="glass-formfield">
-        <input type="text" name="name" placeholder="Name*" required minlength="2">
-        <div class="error-message">Name must be at least 2 characters</div>
-      </div>
-
-      <div class="glass-formfield">
-        <input type="email" name="email" placeholder="Email*" required>
-        <div class="error-message">Please enter a valid email address</div>
-      </div>
-
-      <div class="glass-formfield">
-        <input type="tel" name="phone" placeholder="Phone (10 digits)*" maxlength="10" required>
-        <div class="error-message">Phone must be exactly 10 digits starting with 6–9</div>
-      </div>
-
-      <div class="glass-formfield">
-          <div class="custom-select-wrapper">
-                              <select name="subject" required>
-                                <option value="" disabled selected>Select Service *</option>
-                                <option>Fashion Shoot</option>
-                                <option>Brand Campaign</option>
-                                <option>Product Photography</option>
-                                <option>Video Production</option>
-                                <option>Other</option>
-                              </select>
-                            </div>
-        <div class="error-message">Please select a service</div>
-      </div>
-
-      <div class="btn-container">
-        <button type="button" class="btn-next" id="nextBtn">Next →</button>
-      </div>
-    </div>
-
-    <!-- Step 2 -->
-    <div class="step step-2 hidden" id="step2">
-      <div class="glass-formfield">
-        <input type="text" name="budget" placeholder="Your Budget (optional)">
-      </div>
-
-      <div class="glass-formfield">
-        <input type="text" name="membership" placeholder="GAP Membership (optional)">
-      </div>
-
-      <div class="glass-formfield">
-        <input type="text" name="website" placeholder="Website / Instagram Link (optional)">
-        <div class="error-message">Please enter a valid URL</div>
-      </div>
-
-      <div class="glass-formfield">
-        <input type="text" name="location" placeholder="Your Location (optional)">
-      </div>
-
-      <div class="glass-formfield">
-        <textarea name="message" placeholder="Your Requirement*" required rows="5"></textarea>
-        <div class="error-message">Please describe your requirement (minimum 10 characters)</div>
-      </div>
-
-      <div class="btn-container">
-        <button type="button" class="btn-back" onclick="prevStep()">← Back</button>
-        <button type="submit" class="btn-submit">Submit</button>
-      </div>
-    </div>
-
-  </form>
-  </div>
+          <div class="testimonial-button-next nav-icon">
+            <img class="show-dark" src="assets/imgs/icon/angle-right-light.webp" alt="icon">
+          </div>
         </div>
 
       </div>
     </div>
   </div>
-</section>
+</div> 
+          <!-- testimonial area end  -->
+        <!-- contact area start  -->
+
 <!-- contact area end  -->
 
 <!-- ==================== Required CSS for this form only ==================== -->
@@ -852,10 +955,10 @@
       </div>
     </div> -->
     <!-- IMAGE SECTION -->
-    <div class="image-wrapper">
+    <!-- <div class="image-wrapper">
       <img src="/assets/imgs/Pictures/Brand Campaign & Edit..jpg" alt="Brand Campaign">
     </div>
-    
+     -->
   
     <style>
       /* IMAGE */
@@ -948,7 +1051,147 @@
         </div>
       </div>
     </section>
+<section class="contact-area mt-5">
+  <div class="container">
+    <div class="contact-area-inner section-spacing">
+      <div class="">
+        <div class="section">
+          <div class="title">
+            <h2 class="" style="color: #caa437; width: 100%;font-size: 1000;">Submit the form below to access curated plans and offerings
+          </div>
+        </div>
+      </div>
 
+      <div class="section-content" style="display: flex; flex-direction: row; flex-wrap: wrap; gap:10%; justify-content: center !important;;">
+
+        <!-- Left side - Video iframe (bilkul same rakha) -->
+        <div class="info-box has_fade_anim" style="
+          display:flex;
+          justify-content:flex-start;
+          align-items:flex-start;
+          padding:5px;
+          margin:5px;
+        ">
+          <div style="
+            width:360px;
+            height:640px;
+            border-radius:18px;
+            overflow:hidden;
+            background:#000;
+            box-shadow:0 15px 40px rgba(0,0,0,0.4);
+            margin-top:0;
+            margin-bottom: 10px;
+          ">
+            <iframe src="https://www.youtube.com/embed/wAmoFjj-9Es?controls=0&modestbranding=1&playsinline=1"
+              style="
+                width:100%;
+                height:100%;
+                border:none;
+                display:block;
+                object-fit:cover;
+              " 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Right side - Updated Multi-step Form -->
+        <div class="contact-wrap has_fade_anim" data-delay="0.30" style="flex: 1; min-width: 350px; max-width: 550px;">
+
+       <div class="form-container">
+
+    <h2>Enquiry Form
+</h2>
+
+    <div class="steps-indicator">
+      <div class="step-dot active" id="dot1"></div>
+      <div class="step-dot" id="dot2"></div>
+    </div>
+
+    
+  <form class="glass-form" action="/contact" method="POST" id="contactForm" novalidate>
+
+    <!-- Progress Dots -->
+    <div class="step-dots">
+      <span id="dot1" class="dot active"></span>
+      <span id="dot2" class="dot"></span>
+    </div>
+
+    <!-- Step 1 -->
+          <div class="step step-1" id="step1">
+      <div class="glass-formfield">
+        <input type="text" name="name" placeholder="Name*" required minlength="2">
+        <div class="error-message">Name must be at least 2 characters</div>
+      </div>
+
+      <div class="glass-formfield">
+        <input type="email" name="email" placeholder="Email*" required>
+        <div class="error-message">Please enter a valid email address</div>
+      </div>
+
+      <div class="glass-formfield">
+        <input type="tel" name="phone" placeholder="Phone (10 digits)*" maxlength="10" required>
+        <div class="error-message">Phone must be exactly 10 digits starting with 6–9</div>
+      </div>
+
+      <div class="glass-formfield">
+          <div class="custom-select-wrapper">
+                              <select name="subject" required>
+                                <option value="" disabled selected>Select Service *</option>
+                                <option>Fashion Shoot</option>
+                                <option>Brand Campaign</option>
+                                <option>Product Photography</option>
+                                <option>Video Production</option>
+                                <option>Other</option>
+                              </select>
+                            </div>
+        <div class="error-message">Please select a service</div>
+      </div>
+
+      <div class="btn-container">
+        <button type="button" class="btn-next" id="nextBtn">Next →</button>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="step step-2 hidden" id="step2">
+      <div class="glass-formfield">
+        <input type="text" name="budget" placeholder="Your Budget (optional)">
+      </div>
+
+      <div class="glass-formfield">
+        <input type="text" name="membership" placeholder="GAP Membership (optional)">
+      </div>
+
+      <div class="glass-formfield">
+        <input type="text" name="website" placeholder="Website / Instagram Link (optional)">
+        <div class="error-message">Please enter a valid URL</div>
+      </div>
+
+      <div class="glass-formfield">
+        <input type="text" name="location" placeholder="Your Location (optional)">
+      </div>
+
+      <div class="glass-formfield">
+        <textarea name="message" placeholder="Your Requirement*" required rows="5"></textarea>
+        <div class="error-message">Please describe your requirement (minimum 10 characters)</div>
+      </div>
+
+      <div class="btn-container">
+        <button type="button" class="btn-back" onclick="prevStep()">← Back</button>
+        <button type="submit" class="btn-submit">Submit</button>
+      </div>
+    </div>
+
+  </form>
+  </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
     <style>
       /* ================= FLOW SECTION ================= */
 
@@ -1057,7 +1300,7 @@
       }
     </style>
 
-
+<!-- 
     <div class="gallery-area">
       <div class="container">
         <div class="gallery-area-inner section-spacing-top">
@@ -1076,7 +1319,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
 
 
