@@ -14,8 +14,10 @@
 
 
 
+<link rel="stylesheet" href="assets/css/swiper-bundle.min.css" media="print" onload="this.media='all'">
 
- <!-- All CSS files -->
+ <!-- All CSS files --><link rel="stylesheet" href="assets/css/master-portfolio-carousel.css" media="print" onload="this.media='all'">
+
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/all.min.css">
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
@@ -210,7 +212,7 @@
       <div class="header__nav pos-center">
         <nav class="main-menu">
           <ul>
-            <li><a target="_blank" href="#">home</a></li>
+            <li><a target="_blank" href="/">home</a></li>
             <li><a target="_blank" href="/about">about</a></li>
             <li><a target="_blank" href="/services">services</a></li>
             <li><a target="_blank" href="/contact">Contact</a></li>
@@ -230,7 +232,80 @@
   </div>
 </header>
 <!-- Header area end -->
+<style>
+  .portfolio-active {
+    width: 100%;
+    overflow: visible;
+  }
 
+  .swiper-slide {
+    width: 420px;
+    transition: transform 0.5s ease;
+  }
+
+  .swiper-carousel-animate-opacity img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  /* Mobile view: add fixed height of 520px */
+  @media (max-width: 768px) {
+    .swiper-carousel-animate-opacity img {
+      height: 520px;
+    }
+  }
+
+  body.dark .section-title,
+  body.dark h1,
+  body.dark h2,
+  body.dark h3 {
+    color: #caa437;
+  }
+
+  /* GLOBAL BUTTON OVERRIDE */
+  .wc-btn,
+  input[type="submit"] {
+    width: 220px !important;
+    height: 54px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #000000 !important;
+    border-radius: 50px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .wc-btn span {
+    color: #000000 !important;
+    transition: color 0.3s ease !important;
+  }
+
+  .wc-btn i {
+    color: #f8f5f5 !important;
+    transition: color 0.3s ease !important;
+  }
+
+  .wc-btn:hover,
+  button:hover,
+  a.wc-btn:hover,
+  .btn:hover,
+  input[type="submit"]:hover {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border-color: #000000 !important;
+  }
+
+  .wc-btn:hover span,
+  .wc-btn:hover i {
+    color: #ffffff !important;
+  }
+</style>
 <div class="has-smooth" id="has_smooth"></div>
 <div id="smooth-wrapper">
   <div id="smooth-content">
@@ -1192,6 +1267,91 @@ Trusted by Leading Brands
     </div>
   </div>
 </section>
+
+
+          <h1 style="justify-content: center; text-align: center; margin-bottom:0; margin-top:40px; font-size:5rem;">
+            Our Services
+          </h1>
+
+          <!-- portfolio area start -->
+          <section class="portfolio-area">
+            <div class="container large">
+              <div class="portfolio-area-inner pt-0 mt-0">
+                <div id="app" class="portfolio-slider">
+                  <div class="swiper portfolio-active">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide " data-fade-from="bottom">
+                        <a target="_blank" href="/ethnic-fashion-shoots" style="background-position: center;object-fit: contain;" class="swiper-carousel-animate-opacity">
+                          <img src="assets/imgs/Pictures/Ethnic(5).jpg" loading="lazy" alt="image">
+                          <div class="slide-content"></div>
+                          <h2 class="title-overlay"
+                            style="justify-content: center; text-align:center; margin-top:20px;">
+                            Ethnic Fashion Shoots
+                          </h2>
+                        </a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a target="_blank" href="/western-indo-western-shoot" class="swiper-carousel-animate-opacity">
+                          <img src="assets/imgs/Homeservice/Western.jpg" loading="lazy" alt="image">
+                          <div class="slide-content"></div>
+                          <h2 class="title-overlay"
+                            style="justify-content: center; text-align:center; margin-top:20px;">
+                            Western & Indo-Western Shoots
+                          </h2>
+                        </a>
+                      </div>
+                      <a target="_blank" href="/designer-collections-shoot" class="swiper-slide">
+                        <div class="swiper-carousel-animate-opacity">
+                          <img src="assets/imgs/Homeservice/DesignerCollection.jpg" loading="lazy" alt="image">
+                          <div class="slide-content"></div>
+                          <h2 class="title-overlay"
+                            style="justify-content: center; text-align:center; margin-top:20px;">
+                            Designer Collection & Couture Shoots
+                          </h2>
+                        </div>
+                      </a>
+                      <a target="_blank" href="/retail-catalogue-shoot" class="swiper-slide">
+                        <div class="swiper-carousel-animate-opacity">
+                          <img src="assets/imgs/Homeservice/RetailCatShoot.jpg" loading="lazy" alt="image">
+                          <div class="slide-content"></div>
+                          <h2 class="title-overlay"
+                            style="justify-content: center; text-align:center; margin-top:20px;">
+                            Retail, Store & Catalogue Shoots
+                          </h2>
+                        </div>
+                      </a>
+                      <a target="_blank" href="/brand-campaigns-editorials-shoot" class="swiper-slide">
+                        <div class="swiper-carousel-animate-opacity" >
+                          <img  src="assets/imgs/Pictures/Brand Campaign(1).jpg" loading="lazy" alt="image">
+                          <div class="slide-content"></div>
+                          <h2 class="title-overlay"
+                            style="justify-content: center; text-align:center; margin-top:20px;">
+                            Brand Identity & Concept Shoots
+                          </h2>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="slider-nav overflow-hidden">
+                    <div class="portfolio-button-prev nav-icon " data-fade-from="left" data-on-scroll="0" data-delay="0.30">
+                      <i class="fa-solid fa-angle-left"></i>Prev
+                    </div>
+                    <div class="portfolio-button-next nav-icon " data-fade-from="right" data-on-scroll="0" data-delay="0.30">
+                      Next<i class="fa-solid fa-angle-right"></i>
+                    </div>
+                  </div>
+                  <div class="portfolio-pagination " data-fade-from="bottom" data-fade-offset="0" data-on-scroll="0" data-delay="0.45"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <style>
+            @media (max-width: 400px) {
+              .title-overlay {
+                font-size: 30px !important;
+              }
+            }
+          </style>
     <style>
       /* ================= FLOW SECTION ================= */
 
@@ -1505,7 +1665,40 @@ Trusted by Leading Brands
 
   </div>
 </div>
-</div>
+</div>  </script>
+  <!-- Swiper Core + Effect Carousel -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer ></script>
+  <script src="assets/js/effect-carousel.min.js" defer ></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const swiper = new Swiper(".portfolio-active", {
+        modules: [EffectCarousel],
+        effect: "carousel",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        loop: true,
+        carouselEffect: {
+          opacityStep: 0.25,
+          scaleStep: 0.2,
+          sideSlides: 3,
+        },
+        navigation: {
+          nextEl: ".portfolio-button-next",
+          prevEl: ".portfolio-button-prev",
+        },
+        pagination: {
+          el: ".portfolio-pagination",
+          clickable: true,
+        },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        }
+      });
+    });
+  </script>
 
 
 
