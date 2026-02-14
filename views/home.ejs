@@ -362,63 +362,97 @@
               background: rgba(0, 0, 0, 0.5);
               z-index: 1;
             }
+            .marquee-container {
+  overflow: hidden;           /* hides content that slides out */
+  width: 100%;
+}
+
+.marquee {
+  --gap: 4rem;                /* space between items — adjust as needed */
+  --duration: 60s;            /* total time for one full loop — slower = 80s+, faster = 40s */
+  --direction: left;          /* change to 'right' if you want opposite direction */
+
+  display: flex;
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--gap);
+  will-change: transform;     /* improves performance */
+  animation: scroll var(--duration) linear infinite;
+}
+
+/* Pause when hovering */
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* The magic animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% / 2 - var(--gap) / 2));
+    /* We divide by 2 because content is duplicated */
+  }
+}
+
+/* Optional: reverse direction (left → right scroll) */
+.marquee[data-direction="right"] .marquee-track {
+  animation-direction: reverse;
+}
+
+/* Optional: make text look nicer */
+.text-slider-item {
+  flex-shrink: 0;             /* prevents shrinking */
+  white-space: nowrap;
+}
+
+.title {
+  font-size: 2.5rem;          /* adjust size */
+  font-weight: bold;
+  margin: 0;
+  padding: 1rem 0;
+  color: #000;                /* or your brand color */
+  text-decoration: none;
+}
+
+.title:hover {
+  text-decoration: underline;
+}
           </style>
 
           <!-- text slider area start -->
-          <div class="container large ">
-            <div class="text-slider">
-              <div class="swiper text-slider-active">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="text-slider-item">
-                      <h2 class="title"><a target="_blank" href="#">Brand Identity & Concept Shoots</a></h2>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="text-slider-item">
-                      <h2 class="title"><a target="_blank" href="#">Designer Collection & Couture Shoots</a></h2>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="text-slider-item">
-                      <h2 class="title"><a target="_blank" href="#">Showroom Collection & Digital Catalogues</a></h2>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="text-slider-item">
-                      <h2 class="title"><a target="_blank" href="#">Behind-the-Scenes (BTS) Narratives</a></h2>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="text-slider-item">
-                      <h2 class="title"><a target="_blank" href="#">Luxury Product & Jewellery Shoots</a></h2>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="text-slider-item">
-                      <h2 class="title"><a target="_blank" href="#">Ad Films & Commercial Shoots</a></h2>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="text-slider-item">
-                      <h2 class="title"><a target="_blank" href="#">High-End Retouching & Finishing</a></h2>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="text-slider-item">
-                      <h2 class="title"><a target="_blank" href="#">Professional Model Portfolios</a></h2>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="text-slider-item">
-                      <h2 class="title"><a target="_blank" href="#">Premium Instagram Reels & Influencer Content</a>
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="container large marquee-container">
+  <div class="marquee">
+    <div class="marquee-track">
+      <!-- First set of items -->
+      <div class="text-slider-item"><h2 class="title"><a target="_blank" href="#">Brand Identity & Concept Shoots</a></h2></div>
+      <div class="text-slider-item"><h2 class="title"><a target="_blank" href="#">Designer Collection & Couture Shoots</a></h2></div>
+      <div class="text-slider-item"><h2 class="title"><a target="_blank" href="#">Showroom Collection & Digital Catalogues</a></h2></div>
+      <div class="text-slider-item"><h2 class="title"><a target="_blank" href="#">Behind-the-Scenes (BTS) Narratives</a></h2></div>
+      <div class="text-slider-item"><h2 class="title"><a target="_blank" href="#">Luxury Product & Jewellery Shoots</a></h2></div>
+      <div class="text-slider-item"><h2 class="title"><a target="_blank" href="#">Ad Films & Commercial Shoots</a></h2></div>
+      <div class="text-slider-item"><h2 class="title"><a target="_blank" href="#">High-End Retouching & Finishing</a></h2></div>
+      <div class="text-slider-item"><h2 class="title"><a target="_blank" href="#">Professional Model Portfolios</a></h2></div>
+      <div class="text-slider-item"><h2 class="title"><a target="_blank" href="#">Premium Instagram Reels & Influencer Content</a></h2></div>
+
+      <!-- Duplicate set for seamless infinite loop -->
+      <div class="text-slider-item"><h2 class="title"><a target="_blank" href="#">Brand Identity & Concept Shoots</a></h2></div>
+      <div class="text-slider-item"><h2 class="title"><a target="_blank" href="#">Designer Collection & Couture Shoots</a></h2></div>
+      <div class="text-slider-item"><h2 class="title"><a target="_blank" href="#">Showroom Collection & Digital Catalogues</a></h2></div>
+      <div class="text-slider-item"><h2 class="title"><a target="_blank" href="#">Behind-the-Scenes (BTS) Narratives</a></h2></div>
+      <div class="text-slider-item"><h2 class="title"><a target="_blank" href="#">Luxury Product & Jewellery Shoots</a></h2></div>
+      <div class="text-slider-item"><h2 class="title"><a target="_blank" href="#">Ad Films & Commercial Shoots</a></h2></div>
+      <div class="text-slider-item"><h2 class="title"><a target="_blank" href="#">High-End Retouching & Finishing</a></h2></div>
+      <div class="text-slider-item"><h2 class="title"><a target="_blank" href="#">Professional Model Portfolios</a></h2></div>
+      <div class="text-slider-item"><h2 class="title"><a target="_blank" href="#">Premium Instagram Reels & Influencer Content</a></h2></div>
+    </div>
+  </div>
+</div>
           <!-- text slider area end -->
 
           <h1 style="justify-content: center; text-align: center; margin-bottom:0; margin-top:40px; font-size:5rem;">
