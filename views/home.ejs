@@ -848,7 +848,7 @@ Trusted by Leading Brands
                       </div>
 
                       <form class="glass-form" action="/contact" method="POST" id="contactForm">
-
+                        <input type="hidden" name="contactId" id="contactId">
                         <!-- Step 1 -->
                         <div class="step step-1" id="step1">
                           <div class="glass-formfield">
@@ -1262,6 +1262,10 @@ Trusted by Leading Brands
                 document.getElementById('step2').classList.remove('hidden');
                 document.getElementById('dot1')?.classList.remove('active');
                 document.getElementById('dot2')?.classList.add('active');
+                
+                // Trigger partial submission
+                submitPartial();
+                
                 startIdleTimer();
                 setupIdleResetListeners();
               }
@@ -1334,6 +1338,56 @@ Trusted by Leading Brands
 
             // Initial state
             updateNextButtonState();
+
+            // ─── Partial Submission Logic ────────────────────────────────────
+            async function submitPartial() {
+              const name = document.querySelector('[name="name"]').value;
+              const email = document.querySelector('[name="email"]').value;
+              const phone = document.querySelector('[name="phone"]').value;
+              const subject = document.querySelector('[name="subject"]').value;
+              const contactIdInput = document.getElementById('contactId');
+
+              // Only submit if we have the basic fields
+              if (!name || !email || !phone || !subject) return;
+
+              const payload = {
+                name,
+                email,
+                phone,
+                subject,
+                contactId: contactIdInput.value || undefined
+              };
+
+              try {
+                // Use fetch with keepalive for reliability on page unload
+                const res = await fetch('/contact/partial', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify(payload),
+                  keepalive: true
+                });
+
+                if (res.ok) {
+                  const data = await res.json();
+                  if (data.success && data.id) {
+                    contactIdInput.value = data.id;
+                    console.log('Partial partial saved:', data.id);
+                  }
+                }
+              } catch (err) {
+                console.error('Partial save failed:', err);
+              }
+            }
+
+            // Save partial on visibility change (tab switch / close / minimize)
+            document.addEventListener('visibilitychange', () => {
+              if (document.visibilityState === 'hidden') {
+                 // Check if Step 1 is valid/filled enough to save
+                 if (canGoToNextStep()) {
+                   submitPartial();
+                 }
+              }
+            });
           </script>
 
           <!-- ==================== END FIXED FORM ==================== -->

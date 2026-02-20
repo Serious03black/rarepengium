@@ -292,12 +292,13 @@
 
         <main>
           <!-- contact area start  -->
-            <!-- ==================== FIXED CONTACT FORM SECTION ==================== -->
+          <!-- ==================== FIXED CONTACT FORM SECTION ==================== -->
           <section class="contact-form-section mt-5" style="background: #121212; position: relative; z-index: 1;">
             <div class="container">
               <div class="contact-area-inner section-spacing">
-                
-                <div class="section-header" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+
+                <div class="section-header"
+                  style="display: flex; flex-direction: column; align-items: center; text-align: center;">
                   <div class="section-title-wrapper">
                     <div class="title-wrapper">
                       <h2 class="large has_fade_anim" style="color: #caa437; font-size: 3.5rem; margin-bottom: 1rem;">
@@ -305,20 +306,24 @@
                       </h2>
                     </div>
                   </div>
-                
+
                 </div>
 
-                <div class="section-content" style="display: flex; flex-wrap: wrap; gap: 60px; justify-content: center; margin-top: 60px; position: relative; z-index: 2;">
+                <div class="section-content"
+                  style="display: flex; flex-wrap: wrap; gap: 60px; justify-content: center; margin-top: 60px; position: relative; z-index: 2;">
                   <!-- Left: Contact Info -->
-                  <div class="info-box has_fade_anim" style="flex: 1; min-width: 300px; max-width: 400px; color: white;">
+                  <div class="info-box has_fade_anim"
+                    style="flex: 1; min-width: 300px; max-width: 400px; color: white;">
                     <div class="text-wrapper">
                       <p class="text" style="font-size: 1.2rem; margin-bottom: 2rem;">
                         We’d love to hear from you. Tell us how we can help bring your next visual campaign to life.
                       </p>
                     </div>
                     <ul class="contact-list" style="list-style: none; padding: 0; font-size: 1.1rem; line-height: 1.8;">
-                      <li><a target="_blank" href="tel:+917300031017" style="color: #caa437; text-decoration: none;">+91 73000 31017</a></li>
-                      <li><a target="_blank" href="mailto:info@gapstudio.in" style="color: #caa437; text-decoration: none;">info@gapstudio.in</a></li>
+                      <li><a target="_blank" href="tel:+917300031017" style="color: #caa437; text-decoration: none;">+91
+                          73000 31017</a></li>
+                      <li><a target="_blank" href="mailto:info@gapstudio.in"
+                          style="color: #caa437; text-decoration: none;">info@gapstudio.in</a></li>
                       <li>Delhi <br>NCR</li>
                     </ul>
                   </div>
@@ -335,26 +340,27 @@
                       </div>
 
                       <form class="glass-form" action="/contact" method="POST" id="contactForm">
+                        <input type="hidden" name="contactId" id="contactId">
 
                         <!-- Step 1 -->
-                         <div class="step step-1" id="step1">
-      <div class="glass-formfield">
-        <input type="text" name="name" placeholder="Name*" required minlength="2">
-        <div class="error-message">Name must be at least 2 characters</div>
-      </div>
+                        <div class="step step-1" id="step1">
+                          <div class="glass-formfield">
+                            <input type="text" name="name" placeholder="Name*" required minlength="2">
+                            <div class="error-message">Name must be at least 2 characters</div>
+                          </div>
 
-      <div class="glass-formfield">
-        <input type="email" name="email" placeholder="Email*" required>
-        <div class="error-message">Please enter a valid email address</div>
-      </div>
+                          <div class="glass-formfield">
+                            <input type="email" name="email" placeholder="Email*" required>
+                            <div class="error-message">Please enter a valid email address</div>
+                          </div>
 
-      <div class="glass-formfield">
-        <input type="tel" name="phone" placeholder="Phone (10 digits)*" maxlength="10" required>
-        <div class="error-message">Phone must be exactly 10 digits starting with 6–9</div>
-      </div>
+                          <div class="glass-formfield">
+                            <input type="tel" name="phone" placeholder="Phone (10 digits)*" maxlength="10" required>
+                            <div class="error-message">Phone must be exactly 10 digits starting with 6–9</div>
+                          </div>
 
-      <div class="glass-formfield">
-          <div class="custom-select-wrapper">
+                          <div class="glass-formfield">
+                            <div class="custom-select-wrapper">
                               <select name="subject" required>
                                 <option value="" disabled selected>Select Service *</option>
                                 <option>Fashion Shoot</option>
@@ -364,13 +370,13 @@
                                 <option>Other</option>
                               </select>
                             </div>
-        <div class="error-message">Please select a service</div>
-      </div>
+                            <div class="error-message">Please select a service</div>
+                          </div>
 
-      <div class="btn-container">
-        <button type="button" class="btn-next" id="nextBtn">Next →</button>
-      </div>
-    </div>
+                          <div class="btn-container">
+                            <button type="button" class="btn-next" id="nextBtn">Next →</button>
+                          </div>
+                        </div>
                         <!-- Step 2 -->
                         <div class="step step-2 hidden" id="step2">
                           <div class="glass-formfield">
@@ -401,7 +407,7 @@
                 </div>
               </div>
             </div>
-          </section>                
+          </section>
 
           <!-- ==================== FORM CSS (isolated) ==================== -->
           <style>
@@ -415,7 +421,7 @@
               border-radius: 24px;
               border: 1px solid rgba(202, 164, 55, 0.18);
               box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5),
-                          inset 0 0 20px rgba(202, 164, 55, 0.04);
+                inset 0 0 20px rgba(202, 164, 55, 0.04);
               position: relative;
               overflow: hidden;
             }
@@ -548,7 +554,7 @@
             .contact-form-section .custom-select-wrapper select {
               width: 100%;
               padding: 14px 40px 14px 16px;
-              background: rgba(255,255,255,0.06);
+              background: rgba(255, 255, 255, 0.06);
               border: 1px solid rgba(202, 164, 55, 0.25);
               border-radius: 12px;
               color: white;
@@ -597,239 +603,278 @@
               .contact-form-section .form-container {
                 padding: 32px 20px;
               }
+
               .contact-form-section h2 {
                 font-size: 1.7rem;
               }
             }
+
             .glass-formfield .error-message {
-    display: none;
-    color: #ff5555;
-    font-size: 0.82rem;
-    margin-top: 6px;
-}
+              display: none;
+              color: #ff5555;
+              font-size: 0.82rem;
+              margin-top: 6px;
+            }
 
-.glass-formfield.touched.invalid .error-message {
-    display: block;
-}
+            .glass-formfield.touched.invalid .error-message {
+              display: block;
+            }
 
-.glass-formfield.touched.invalid input,
-.glass-formfield.touched.invalid select,
-.glass-formfield.touched.invalid textarea {
-    border-color: #ff5555 !important;
-    background: rgba(255, 85, 85, 0.08);
-    box-shadow: 0 0 0 3px rgba(255, 85, 85, 0.18);
-}
+            .glass-formfield.touched.invalid input,
+            .glass-formfield.touched.invalid select,
+            .glass-formfield.touched.invalid textarea {
+              border-color: #ff5555 !important;
+              background: rgba(255, 85, 85, 0.08);
+              box-shadow: 0 0 0 3px rgba(255, 85, 85, 0.18);
+            }
           </style>
 
           <!-- ==================== FORM JAVASCRIPT ==================== -->
-        <script>
-    let idleTimer = null;
-    const IDLE_TIMEOUT = 600000; // 10 minutes
+          <script>
+            let idleTimer = null;
+            const IDLE_TIMEOUT = 600000; // 10 minutes
 
-    // ─── Validate single field ───────────────────────────────────────
-    function validateField(field) {
-        if (!field) return false;
+            // ─── Validate single field ───────────────────────────────────────
+            function validateField(field) {
+              if (!field) return false;
 
-        const wrapper = field.closest('.glass-formfield');
-        if (!wrapper) return false;
+              const wrapper = field.closest('.glass-formfield');
+              if (!wrapper) return false;
 
-        let isValid = field.checkValidity(); // uses HTML5 (required, type=email, pattern, etc.)
+              let isValid = field.checkValidity(); // uses HTML5 (required, type=email, pattern, etc.)
 
-        // Custom / stronger validation for PHONE
-        if (field.name === 'phone' && field.value.trim()) {
-            const phoneRegex = /^[6-9]\d{9}$/;
-            isValid = phoneRegex.test(field.value);
-            field.setCustomValidity(isValid ? '' : 'Invalid phone');
-        }
+              // Custom / stronger validation for PHONE
+              if (field.name === 'phone' && field.value.trim()) {
+                const phoneRegex = /^[6-9]\d{9}$/;
+                isValid = phoneRegex.test(field.value);
+                field.setCustomValidity(isValid ? '' : 'Invalid phone');
+              }
 
-        // Stronger EMAIL check (optional - HTML5 type="email" is already good, but we can tighten)
-        if (field.name === 'email' && field.value.trim()) {
-            // Very common strict-ish regex (catches most real-world mistakes)
-            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            isValid = emailRegex.test(field.value);
-            field.setCustomValidity(isValid ? '' : 'Invalid email');
-        }
+              // Stronger EMAIL check (optional - HTML5 type="email" is already good, but we can tighten)
+              if (field.name === 'email' && field.value.trim()) {
+                // Very common strict-ish regex (catches most real-world mistakes)
+                const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                isValid = emailRegex.test(field.value);
+                field.setCustomValidity(isValid ? '' : 'Invalid email');
+              }
 
-        // Name min length
-        if (field.name === 'name' && field.value.trim()) {
-            isValid = field.value.trim().length >= 2;
-        }
+              // Name min length
+              if (field.name === 'name' && field.value.trim()) {
+                isValid = field.value.trim().length >= 2;
+              }
 
-        // Message min length
-        if (field.name === 'message' && field.value.trim()) {
-            isValid = field.value.trim().length >= 10;
-        }
+              // Message min length
+              if (field.name === 'message' && field.value.trim()) {
+                isValid = field.value.trim().length >= 10;
+              }
 
-        // Apply invalid class (error visibility depends on .touched in CSS)
-        wrapper.classList.toggle('invalid', !isValid);
+              // Apply invalid class (error visibility depends on .touched in CSS)
+              wrapper.classList.toggle('invalid', !isValid);
 
-        return isValid;
-    }
-
-    // ─── Mark field as touched & re-validate ─────────────────────────
-    function markTouchedAndValidate(field) {
-        if (!field) return;
-
-        const wrapper = field.closest('.glass-formfield');
-        if (wrapper) {
-            wrapper.classList.add('touched');
-            validateField(field);
-        }
-    }
-
-    // ─── Check if Step 1 is valid (for Next button) ──────────────────
-    function canGoToNextStep() {
-        const requiredFields = document.querySelectorAll('#step1 [required]');
-        return Array.from(requiredFields).every(field => {
-            const wrapper = field.closest('.glass-formfield');
-            return validateField(field) && wrapper?.classList.contains('touched');
-        });
-    }
-
-    // ─── Enable/disable Next button ──────────────────────────────────
-    function updateNextButtonState() {
-        const nextBtn = document.getElementById('nextBtn');
-        if (!nextBtn) return;
-
-        if (canGoToNextStep()) {
-            nextBtn.classList.add('enabled');
-        } else {
-            nextBtn.classList.remove('enabled');
-        }
-    }
-
-    // ─── Live check while typing (updates validity, but no error shown yet) ──
-    function liveValidate(e) {
-        validateField(e.target);
-        if (e.target.closest('#step1')) {
-            updateNextButtonState();
-        }
-    }
-
-    // ─── When user leaves field via blur ─────────────────────────────
-    function onBlurHandler(e) {
-        markTouchedAndValidate(e.target);
-        if (e.target.closest('#step1')) {
-            updateNextButtonState();
-        }
-    }
-
-    // ─── When focusing NEW field → validate/mark PREVIOUS field ─────
-    let lastFocused = null;
-
-    document.addEventListener('focusin', (e) => {
-        const newField = e.target;
-
-        if (lastFocused && lastFocused !== newField) {
-            if (['INPUT', 'SELECT', 'TEXTAREA'].includes(lastFocused.tagName)) {
-                markTouchedAndValidate(lastFocused);
-                if (lastFocused.closest('#step1')) {
-                    updateNextButtonState();
-                }
+              return isValid;
             }
-        }
 
-        lastFocused = newField;
-    });
+            // ─── Mark field as touched & re-validate ─────────────────────────
+            function markTouchedAndValidate(field) {
+              if (!field) return;
 
-    // Attach listeners to all relevant fields
-    document.querySelectorAll('input, select, textarea').forEach(field => {
-        field.addEventListener('input', liveValidate);
-        field.addEventListener('blur', onBlurHandler);
+              const wrapper = field.closest('.glass-formfield');
+              if (wrapper) {
+                wrapper.classList.add('touched');
+                validateField(field);
+              }
+            }
 
-        if (field.tagName === 'SELECT') {
-            field.addEventListener('change', () => {
-                markTouchedAndValidate(field);
+            // ─── Check if Step 1 is valid (for Next button) ──────────────────
+            function canGoToNextStep() {
+              const requiredFields = document.querySelectorAll('#step1 [required]');
+              return Array.from(requiredFields).every(field => {
+                const wrapper = field.closest('.glass-formfield');
+                return validateField(field) && wrapper?.classList.contains('touched');
+              });
+            }
+
+            // ─── Enable/disable Next button ──────────────────────────────────
+            function updateNextButtonState() {
+              const nextBtn = document.getElementById('nextBtn');
+              if (!nextBtn) return;
+
+              if (canGoToNextStep()) {
+                nextBtn.classList.add('enabled');
+              } else {
+                nextBtn.classList.remove('enabled');
+              }
+            }
+
+            // ─── Live check while typing (updates validity, but no error shown yet) ──
+            function liveValidate(e) {
+              validateField(e.target);
+              if (e.target.closest('#step1')) {
                 updateNextButtonState();
+              }
+            }
+
+            // ─── When user leaves field via blur ─────────────────────────────
+            function onBlurHandler(e) {
+              markTouchedAndValidate(e.target);
+              if (e.target.closest('#step1')) {
+                updateNextButtonState();
+              }
+            }
+
+            // ─── When focusing NEW field → validate/mark PREVIOUS field ─────
+            let lastFocused = null;
+
+            document.addEventListener('focusin', (e) => {
+              const newField = e.target;
+
+              if (lastFocused && lastFocused !== newField) {
+                if (['INPUT', 'SELECT', 'TEXTAREA'].includes(lastFocused.tagName)) {
+                  markTouchedAndValidate(lastFocused);
+                  if (lastFocused.closest('#step1')) {
+                    updateNextButtonState();
+                  }
+                }
+              }
+
+              lastFocused = newField;
             });
-        }
-    });
 
-    // Next button click
-    document.getElementById('nextBtn')?.addEventListener('click', () => {
-        // Force touch + validate all step 1 fields
-        document.querySelectorAll('#step1 input, #step1 select').forEach(f => {
-            markTouchedAndValidate(f);
-        });
+            // Attach listeners to all relevant fields
+            document.querySelectorAll('input, select, textarea').forEach(field => {
+              field.addEventListener('input', liveValidate);
+              field.addEventListener('blur', onBlurHandler);
 
-        if (canGoToNextStep()) {
-            document.getElementById('step1').classList.add('hidden');
-            document.getElementById('step2').classList.remove('hidden');
-            document.getElementById('dot1')?.classList.remove('active');
-            document.getElementById('dot2')?.classList.add('active');
-            startIdleTimer();
-            setupIdleResetListeners();
-        }
-    });
+              if (field.tagName === 'SELECT') {
+                field.addEventListener('change', () => {
+                  markTouchedAndValidate(field);
+                  updateNextButtonState();
+                });
+              }
+            });
 
-    function prevStep() {
-        document.getElementById('step2').classList.add('hidden');
-        document.getElementById('step1').classList.remove('hidden');
-        document.getElementById('dot2')?.classList.remove('active');
-        document.getElementById('dot1')?.classList.add('active');
-        clearTimeout(idleTimer);
-        removeIdleResetListeners();
-    }
+            // Next button click
+            document.getElementById('nextBtn')?.addEventListener('click', () => {
+              // Force touch + validate all step 1 fields
+              document.querySelectorAll('#step1 input, #step1 select').forEach(f => {
+                markTouchedAndValidate(f);
+              });
 
-    // Idle timer ──────────────────────────────────────────────────────
-    function startIdleTimer() {
-        clearTimeout(idleTimer);
-        idleTimer = setTimeout(autoSubmit, IDLE_TIMEOUT);
-    }
+              if (canGoToNextStep()) {
+                submitPartial();
+                document.getElementById('step1').classList.add('hidden');
+                document.getElementById('step2').classList.remove('hidden');
+                document.getElementById('dot1')?.classList.remove('active');
+                document.getElementById('dot2')?.classList.add('active');
+                startIdleTimer();
+                setupIdleResetListeners();
+              }
+            });
 
-    function autoSubmit() {
-        const messageInput = document.querySelector('[name="message"]');
-        if (messageInput && !messageInput.value.trim()) {
-            messageInput.value = "Partial submission: User became idle after filling basic information.";
-        }
-        document.getElementById('contactForm')?.submit();
-    }
+            function prevStep() {
+              document.getElementById('step2').classList.add('hidden');
+              document.getElementById('step1').classList.remove('hidden');
+              document.getElementById('dot2')?.classList.remove('active');
+              document.getElementById('dot1')?.classList.add('active');
+              clearTimeout(idleTimer);
+              removeIdleResetListeners();
+            }
 
-    function setupIdleResetListeners() {
-        const step2Fields = document.querySelectorAll('#step2 input, #step2 textarea');
-        step2Fields.forEach(field => {
-            field.addEventListener('input', startIdleTimer);
-            field.addEventListener('change', startIdleTimer);
-        });
-        document.addEventListener('keydown', startIdleTimer);
-        document.addEventListener('mousemove', startIdleTimer);
-    }
+            // Idle timer ──────────────────────────────────────────────────────
+            function startIdleTimer() {
+              clearTimeout(idleTimer);
+              idleTimer = setTimeout(autoSubmit, IDLE_TIMEOUT);
+            }
 
-    function removeIdleResetListeners() {
-        const step2Fields = document.querySelectorAll('#step2 input, #step2 textarea');
-        step2Fields.forEach(field => {
-            field.removeEventListener('input', startIdleTimer);
-            field.removeEventListener('change', startIdleTimer);
-        });
-        document.removeEventListener('keydown', startIdleTimer);
-        document.removeEventListener('mousemove', startIdleTimer);
-    }
+            function autoSubmit() {
+              const messageInput = document.querySelector('[name="message"]');
+              if (messageInput && !messageInput.value.trim()) {
+                messageInput.value = "Partial submission: User became idle after filling basic information.";
+              }
+              document.getElementById('contactForm')?.submit();
+            }
 
-    // Final submit protection
-    document.getElementById('contactForm')?.addEventListener('submit', function(e) {
-        e.preventDefault();
-        clearTimeout(idleTimer);
+            function setupIdleResetListeners() {
+              const step2Fields = document.querySelectorAll('#step2 input, #step2 textarea');
+              step2Fields.forEach(field => {
+                field.addEventListener('input', startIdleTimer);
+                field.addEventListener('change', startIdleTimer);
+              });
+              document.addEventListener('keydown', startIdleTimer);
+              document.addEventListener('mousemove', startIdleTimer);
+            }
 
-        // Force validation on everything
-        document.querySelectorAll('input[required], select[required], textarea[required]').forEach(f => {
-            markTouchedAndValidate(f);
-        });
+            function removeIdleResetListeners() {
+              const step2Fields = document.querySelectorAll('#step2 input, #step2 textarea');
+              step2Fields.forEach(field => {
+                field.removeEventListener('input', startIdleTimer);
+                field.removeEventListener('change', startIdleTimer);
+              });
+              document.removeEventListener('keydown', startIdleTimer);
+              document.removeEventListener('mousemove', startIdleTimer);
+            }
 
-        const isStep1Valid = canGoToNextStep();
-        const messageField = document.querySelector('[name="message"]');
-        const messageValid = messageField ? validateField(messageField) : true;
+            // Final submit protection
+            document.getElementById('contactForm')?.addEventListener('submit', function (e) {
+              e.preventDefault();
+              clearTimeout(idleTimer);
 
-        if (!isStep1Valid || !messageValid) {
-            alert('Please fix the highlighted fields before submitting.');
-            return;
-        }
+              // Force validation on everything
+              document.querySelectorAll('input[required], select[required], textarea[required]').forEach(f => {
+                markTouchedAndValidate(f);
+              });
 
-        this.submit();
-    });
+              const isStep1Valid = canGoToNextStep();
+              const messageField = document.querySelector('[name="message"]');
+              const messageValid = messageField ? validateField(messageField) : true;
 
-    // Initial state
-    updateNextButtonState();
-</script> 
+              if (!isStep1Valid || !messageValid) {
+                alert('Please fix the highlighted fields before submitting.');
+                return;
+              }
+
+              this.submit();
+            });
+
+            // Initial state
+            updateNextButtonState();
+
+            async function submitPartial() {
+              const name = document.querySelector('[name="name"]').value;
+              const email = document.querySelector('[name="email"]').value;
+              const phone = document.querySelector('[name="phone"]').value;
+              const subject = document.querySelector('[name="subject"]').value;
+              const contactIdInput = document.getElementById('contactId');
+
+              const payload = {
+                name, email, phone, subject,
+                contactId: contactIdInput ? contactIdInput.value : null
+              };
+
+              try {
+                const res = await fetch('/contact/partial', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify(payload),
+                  keepalive: true
+                });
+                const data = await res.json();
+                if (data.success && data.id && contactIdInput) {
+                  contactIdInput.value = data.id;
+                }
+              } catch (err) {
+                console.error("Partial save failed", err);
+              }
+            }
+
+            document.addEventListener('visibilitychange', () => {
+              if (document.visibilityState === 'hidden') {
+                if (typeof canGoToNextStep === 'function' && canGoToNextStep()) {
+                  submitPartial();
+                }
+              }
+            });
+          </script>
           <!-- ==================== END FIXED FORM ==================== -->
 
           <style>
@@ -859,8 +904,13 @@
             }
 
             @keyframes scroll-logos {
-              0% { transform: translateX(0); }
-              100% { transform: translateX(-50%); }
+              0% {
+                transform: translateX(0);
+              }
+
+              100% {
+                transform: translateX(-50%);
+              }
             }
 
             .clients-logos.marquee-container::before,
@@ -873,92 +923,102 @@
               z-index: 1;
               pointer-events: none;
             }
-            .clients-logos.marquee-container::before { left: 0; }
-            .clients-logos.marquee-container::after { right: 0; }
+
+            .clients-logos.marquee-container::before {
+              left: 0;
+            }
+
+            .clients-logos.marquee-container::after {
+              right: 0;
+            }
           </style>
           <!-- contact area end  -->
 
         </main>
-<style>
-  .copyright-area-inne {
-    display: flex;
-    /* gap: 20px 60px; */
-    justify-content: space-between;
-    align-items: center;
-    padding: 51px 0;
-    border-top: 1px solid rgba(255, 255, 255, .08);
-}
-@media (max-width:1241px) {
-                                                                .footer-cta{
-                                                                  display: flex;
-                                                                  flex-direction: column;
+        <style>
+          .copyright-area-inne {
+            display: flex;
+            /* gap: 20px 60px; */
+            justify-content: space-between;
+            align-items: center;
+            padding: 51px 0;
+            border-top: 1px solid rgba(255, 255, 255, .08);
+          }
 
-                                                                }
-                                                                .explore{
-                                                                  font-size: 140%;
-                                                                }
-                                                                
-                                                               }
-</style>
-         <!-- footer area start  -->
+          @media (max-width:1241px) {
+            .footer-cta {
+              display: flex;
+              flex-direction: column;
+
+            }
+
+            .explore {
+              font-size: 140%;
+            }
+
+          }
+        </style>
+        <!-- footer area start  -->
         <footer class="footer-area">
-         
-                                                             <style>
-                                                              .footer-cta {
-                                                                 display: grid;
-                                                                 grid-template-columns: 2fr 1.8fr ;
-                                                                 gap: 10px;
-                                                                 align-items: center;
-                                                               }
-                                                               @media (max-width:1241px) {
-                                                                .footer-cta{
-                                                                  display: flex;
-                                                                  flex-direction: column;
 
-                                                                }
-                                                                .explore{
-                                                                  font-size: 140%;
-                                                                }
-                                                                
-                                                               }
-                                                               .social-vertical {
-  position: fixed;
-  bottom: 138px;
-  display: flex;
-  justify-content: start;
-  gap: 14px;
-  z-index: 999;
-  left: 70%;
-}
+          <style>
+            .footer-cta {
+              display: grid;
+              grid-template-columns: 2fr 1.8fr;
+              gap: 10px;
+              align-items: center;
+            }
 
-.social-vertical a {
-  width: 42px;
-  height: 42px;
-  background: #111;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  font-size: 18px;
-  transition: all 0.3s ease;
-}
+            @media (max-width:1241px) {
+              .footer-cta {
+                display: flex;
+                flex-direction: column;
 
-.social-vertical a:hover {
-  background: #ff6a00;
-  transform: translateY(-4px);
-}
+              }
 
-/* Mobile handling */
-@media (max-width: 768px) {
-  .social-vertical {
-    position: static;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 20px;
-  }
-}
+              .explore {
+                font-size: 140%;
+              }
 
+            }
+
+            .social-vertical {
+              position: fixed;
+              bottom: 138px;
+              display: flex;
+              justify-content: start;
+              gap: 14px;
+              z-index: 999;
+              left: 70%;
+            }
+
+            .social-vertical a {
+              width: 42px;
+              height: 42px;
+              background: #111;
+              color: #fff;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 50%;
+              font-size: 18px;
+              transition: all 0.3s ease;
+            }
+
+            .social-vertical a:hover {
+              background: #ff6a00;
+              transform: translateY(-4px);
+            }
+
+            /* Mobile handling */
+            @media (max-width: 768px) {
+              .social-vertical {
+                position: static;
+                flex-direction: row;
+                justify-content: center;
+                margin-top: 20px;
+              }
+            }
           </style>
           <div class="container">
             <div class="footer-area-inner  ">
@@ -975,8 +1035,8 @@
                 <div class="footer-widget-wrapper newsletter">
                   <form action="/book-demo" method="post" class="subscribe-form" id="subscribeForm">
                     <div class="input-field">
-                      <input type="tel" name="mobile" id="subscribeMobile" style="font-size: 16px;" placeholder="Enter your mobile number"
-                        maxlength="10" inputmode="numeric" required>
+                      <input type="tel" name="mobile" id="subscribeMobile" style="font-size: 16px;"
+                        placeholder="Enter your mobile number" maxlength="10" inputmode="numeric" required>
 
                       <button type="submit" class="subscribe-btn">
                         <img src="/assets/imgs/icon/arrow-light.webp" alt="icon">
@@ -1032,20 +1092,21 @@
                       }
                     });
                   </script>
-                   <div class="social-vertical mb-3">
-  <a href="https://www.instagram.com/golden.apple.productions/" target="_blank" aria-label="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-    <i class="fab fa-facebook-f"></i>
-  </a>
-  <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-    <i class="fa-brands fa-twitter"></i>
-  </a>
-  <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-</div>
+                  <div class="social-vertical mb-3">
+                    <a href="https://www.instagram.com/golden.apple.productions/" target="_blank"
+                      aria-label="Instagram">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                      <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

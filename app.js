@@ -174,6 +174,7 @@ app.get("/blog/:id", ensureDBConnected, async (req, res) => {
 app.post("/contact", ensureDBConnected, async (req, res) => {
   try {
     let {
+      contactId, // New hidden field
       name,
       email,
       phone,
@@ -212,22 +213,40 @@ app.post("/contact", ensureDBConnected, async (req, res) => {
       return res.redirect("/#contact");
     }
 
-    await Contact.create({
-      name,
-      email,
-      phone,
-      subject,
-      website,
-      message,
-      budget: finalBudget,
-      membership,
-      location,
-    });
-
-    console.log("New contact saved:", { name, email, budget: finalBudget });
+    if (contactId) {
+      // Update existing partial contact
+      await Contact.findByIdAndUpdate(contactId, {
+        name,
+        email,
+        phone,
+        subject,
+        website,
+        message,
+        budget: finalBudget,
+        membership,
+        location,
+        isPartial: false // Mark as complete
+      });
+      console.log("Updated contact:", { name, email, contactId });
+    } else {
+      // Create new contact
+      await Contact.create({
+        name,
+        email,
+        phone,
+        subject,
+        website,
+        message,
+        budget: finalBudget,
+        membership,
+        location,
+        isPartial: false
+      });
+      console.log("New contact saved:", { name, email, budget: finalBudget });
+    }
 
     // Your beautiful thank-you HTML (unchanged)
-   return res.send(`<!DOCTYPE html>
+    return res.send(`<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -333,6 +352,42 @@ setInterval(createParticle,300);
   } catch (err) {
     console.error("CONTACT FORM ERROR:", err);
     return res.redirect("/#contact");
+  }
+});
+
+// Partial Submission Route
+app.post("/contact/partial", ensureDBConnected, async (req, res) => {
+  try {
+    let { contactId, name, email, phone, subject } = req.body;
+
+    // Basic validation for Step 1
+    if (!name || !email || !phone || !subject) {
+      return res.status(400).json({ error: "Missing required fields for partial submission" });
+    }
+
+    if (contactId) {
+      await Contact.findByIdAndUpdate(contactId, {
+        name: name.trim(),
+        email: email.trim().toLowerCase(),
+        phone: phone.trim(),
+        subject: subject.trim(),
+        isPartial: true // Still partial
+      });
+      return res.json({ success: true, id: contactId });
+    }
+
+    const newContact = await Contact.create({
+      name: name.trim(),
+      email: email.trim().toLowerCase(),
+      phone: phone.trim(),
+      subject: subject.trim(),
+      isPartial: true
+    });
+
+    res.json({ success: true, id: newContact._id });
+  } catch (err) {
+    console.error("Partial submission error:", err);
+    res.status(500).json({ error: "Server error" });
   }
 });
 
