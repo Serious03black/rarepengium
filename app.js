@@ -105,12 +105,21 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
+// Trust the first proxy (Render, Railway, Heroku, Nginx etc. all sit in front)
+// Without this, req.secure is always false and secure cookies never transmit back.
+app.set("trust proxy", 1);
+
 app.use(
   session({
     secret: process.env.SESSION_SECRET || "change-this-in-production",
     resave: false,
     saveUninitialized: false,
-    cookie: { secure: process.env.NODE_ENV === "production" }, // true only in prod with HTTPS
+    cookie: {
+      secure: process.env.NODE_ENV === "production", // HTTPS-only in prod
+      sameSite: "lax",   // needed for redirect flows
+      httpOnly: true,     // prevent JS access to session cookie
+      maxAge: 1000 * 60 * 60 * 8, // 8 hours
+    },
   })
 );
 
