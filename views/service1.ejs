@@ -226,6 +226,17 @@
                       height: 100%;
                       object-fit: contain;
                     }
+
+                    /* ── Mobile: force horizontal video ── */
+                    @media (max-width: 767px) {
+                      .thumb-main {
+                        height: auto !important;
+                        aspect-ratio: 16 / 9;
+                      }
+                      #heroVideo {
+                        object-fit: cover !important;
+                      }
+                    }
                   </style>
                   <script>
                     const v = document.getElementById("heroVideo");

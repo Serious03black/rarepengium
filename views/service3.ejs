@@ -88,7 +88,8 @@
     <div class="offcanvas-3__inner" style="background:#000000; color:#ffffff;">
       <div class="offcanvas-3__meta-wrapper" style="color:#ffffff;">
         <div>
-          <button id="close_offcanvas" class="close-button close-offcanvas" onclick="hideCanvas3()" style="color:#ffffff;">
+          <button id="close_offcanvas" class="close-button close-offcanvas" onclick="hideCanvas3()"
+            style="color:#ffffff;">
             <span style="background:#ffffff;"></span>
             <span style="background:#ffffff;"></span>
           </button>
@@ -109,61 +110,61 @@
             <li><a target="_blank" href="/" style="color:#ffffff;">Home</a></li>
             <li><a target="_blank" href="/about" style="color:#ffffff;">About</a></li>
             <li>
-  <a target="_blank" href="/services" style="color:#ffffff;">
-    Services
-  </a>
+              <a target="_blank" href="/services" style="color:#ffffff;">
+                Services
+              </a>
 
-  <ul style="
+              <ul style="
     margin-top:20px;
     padding-left:26px;
     list-style-type: disc;
     list-style-position: outside;
   ">
 
-    <li style="margin-bottom:11px; font-size:5px !important;">
-      <p>
-      <a target="_blank" href="/ethnic-fashion-shoots">
-        Ethnic Fashion Shoots
+                <li style="margin-bottom:11px; font-size:5px !important;">
+                  <p>
+                    <a target="_blank" href="/ethnic-fashion-shoots">
+                      Ethnic Fashion Shoots
 
-      </a>
-    </p>
-    </li>
-<style>
-  @media only screen and (max-width: 991px) {
-    .offcanvas-3__menu li a {
-        font-size: 1.5vh;
-        color: rgba(255, 255, 255, .6705882353);
-        background-image: unset;
-        -webkit-text-fill-color: unset;
-    }
-}
-</style>
-    <li style="margin-bottom:11px;">
-      <a target="_blank" href="/western-indo-western-shoot">
-        Western & Indo-Western Shoots
-      </a>
-    </li>
+                    </a>
+                  </p>
+                </li>
+                <style>
+                  @media only screen and (max-width: 991px) {
+                    .offcanvas-3__menu li a {
+                      font-size: 1.5vh;
+                      color: rgba(255, 255, 255, .6705882353);
+                      background-image: unset;
+                      -webkit-text-fill-color: unset;
+                    }
+                  }
+                </style>
+                <li style="margin-bottom:11px;">
+                  <a target="_blank" href="/western-indo-western-shoot">
+                    Western & Indo-Western Shoots
+                  </a>
+                </li>
 
-    <li style="margin-bottom:11px;">
-      <a target="_blank" href="/designer-collections-shoot">
-        Designer Collection & Couture Shoots
-      </a>
-    </li>
+                <li style="margin-bottom:11px;">
+                  <a target="_blank" href="/designer-collections-shoot">
+                    Designer Collection & Couture Shoots
+                  </a>
+                </li>
 
-    <li style="margin-bottom:11px;">
-      <a target="_blank" href="/retail-catalogue-shoot">
-        Retail, Store & Catalogue Shoots
-      </a>
-    </li>
+                <li style="margin-bottom:11px;">
+                  <a target="_blank" href="/retail-catalogue-shoot">
+                    Retail, Store & Catalogue Shoots
+                  </a>
+                </li>
 
-    <li style="margin-bottom:11px;">
-      <a target="_blank" href="/brand-campaigns-editorials-shoot">
-        Brand Identity & Concept Shoots
-      </a>
-    </li>
+                <li style="margin-bottom:11px;">
+                  <a target="_blank" href="/brand-campaigns-editorials-shoot">
+                    Brand Identity & Concept Shoots
+                  </a>
+                </li>
 
-  </ul>
-</li>
+              </ul>
+            </li>
 
             <li><a target="_blank" href="/ourwork" style="color:#ffffff;">Our Work</a></li>
             <li><a target="_blank" href="/blogs" style="color:#ffffff;">Blogs</a></li>
@@ -216,7 +217,7 @@
           </nav>
         </div>
         <div class="header__button">
-          <a  class="wc-btn wc-btn-primary btn-text-flip" href="javascript:void(0)" onclick="openDemoPopup()"><span
+          <a class="wc-btn wc-btn-primary btn-text-flip" href="javascript:void(0)" onclick="openDemoPopup()"><span
               data-text="Book Free Demo">Book Free Demo</span><i class="fa-solid fa-play"></i></a>
         </div>
         <div class="header__navicon d-xl-none">
@@ -244,87 +245,106 @@
             <div class="container">
 
               <!-- Hero Video -->
-            <div class="hero-video-container">
-  <video id="heroVideo" autoplay muted loop playsinline>
-    <source src="https://res.cloudinary.com/dpztzthmz/video/upload/v1769099187/HeroVideo_d0f959.mp4" type="video/mp4">
-  </video>
-</div>
+              <div class="hero-video-container">
+                <video id="heroVideo" autoplay muted loop playsinline>
+                  <source src="https://res.cloudinary.com/dpztzthmz/video/upload/v1769099187/HeroVideo_d0f959.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
 
-<script>
-  // Optional: unmute on first user interaction (good practice)
-  const v = document.getElementById("heroVideo");
-  document.addEventListener("click", () => {
-     
-    v.play();
-  }, { once: true });
-</script>
+              <script>
+                // Optional: unmute on first user interaction (good practice)
+                const v = document.getElementById("heroVideo");
+                document.addEventListener("click", () => {
 
-<style>
-  /* Reset default margins */
-  body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
+                  v.play();
+                }, { once: true });
+              </script>
 
-  .hero-video-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;           /* ← full viewport height */
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-  }
+              <style>
+                /* Reset default margins */
+                body {
+                  margin: 0;
+                  padding: 0;
+                  overflow-x: hidden;
+                }
 
-  #heroVideo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    object-fit: cover;       /* ← this is the magic line */
-  }
+                .hero-video-container {
+                  position: relative;
+                  width: 100%;
+                  height: 100vh;
+                  /* ← full viewport height */
+                  overflow: hidden;
+                  margin: 0;
+                  padding: 0;
+                }
 
-  /* Optional: make it look good on mobile too */
-  @media (max-width: 768px) {
-    #heroVideo {
-      object-fit: cover;
-    }
-  }
-</style>
+                #heroVideo {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  min-width: 100%;
+                  min-height: 100%;
+                  width: auto;
+                  height: auto;
+                  transform: translate(-50%, -50%);
+                  object-fit: cover;
+                  /* ← this is the magic line */
+                }
+
+                /* ── Mobile: force horizontal video ── */
+                @media (max-width: 767px) {
+                  .hero-video-container {
+                    height: auto !important;
+                    aspect-ratio: 16 / 9;
+                  }
+
+                  #heroVideo {
+                    position: relative;
+                    top: auto;
+                    left: auto;
+                    min-width: auto;
+                    min-height: auto;
+                    width: 100%;
+                    height: 100%;
+                    transform: none;
+                    object-fit: cover;
+                  }
+                }
+              </style>
               <!-- Title + Features -->
- <style>
-      .section1{
-        margin-top: 2%;
-        display: flex !important;
-        flex-wrap: wrap !important;
-        gap: 130px;
-      }
-      .feature-list{
-       color: white;
-       font-size: 20px;
-       display: flex;
-       gap: 20PX;
-       line-height: 40PX;
-      flex-wrap: wrap !important;
-      }
-      .feature-list ul li::before {
-  content: "- ";
-}@media (max-width:1388px) {
-   .section1{
-        gap: 20px;
-      }
-  
-}
+              <style>
+                .section1 {
+                  margin-top: 2%;
+                  display: flex !important;
+                  flex-wrap: wrap !important;
+                  gap: 130px;
+                }
 
-    </style>
-   <div class="section1">
+                .feature-list {
+                  color: white;
+                  font-size: 20px;
+                  display: flex;
+                  gap: 20PX;
+                  line-height: 40PX;
+                  flex-wrap: wrap !important;
+                }
+
+                .feature-list ul li::before {
+                  content: "- ";
+                }
+
+                @media (max-width:1388px) {
+                  .section1 {
+                    gap: 20px;
+                  }
+
+                }
+              </style>
+              <div class="section1">
                 <div class="section">
                   <div class="title-wrapper">
-                    <h1 class="section-title has_fade_anim"style="font-size: 59px  !important;" data-on-scroll="0">
+                    <h1 class="section-title has_fade_anim" style="font-size: 59px  !important;" data-on-scroll="0">
                       Designer Collection <br>
                       Shoots
                     </h1>
@@ -432,7 +452,7 @@
                 <img src="assets/imgs/Pictures/Designer Collection(7).jpg" alt="Ethnic Fashion 8" loading="lazy">
                 <img src="assets/imgs/Pictures/Designer Collection(8).jpg" alt="Ethnic Fashion 9" loading="lazy">
                 <!-- <img src="assets/imgs/Pictures/Ethnic(9).jpg" alt="Ethnic Fashion 10" loading="lazy"> -->
-                  <img src="assets/imgs/Pictures/Designer Collection(2).jpg" alt="Ethnic Fashion 3" loading="lazy">
+                <img src="assets/imgs/Pictures/Designer Collection(2).jpg" alt="Ethnic Fashion 3" loading="lazy">
                 <img src="assets/imgs/Pictures/Designer Collection(3).jpg" alt="Ethnic Fashion 4" loading="lazy">
               </div>
             </div>
@@ -525,65 +545,67 @@
         </main>
 
 
-         <!-- footer area start  -->
+        <!-- footer area start  -->
         <footer class="footer-area">
-         
-                                                             <style>
-                                                              .footer-cta {
-                                                                 display: grid;
-                                                                 grid-template-columns: 2fr 1.8fr ;
-                                                                 gap: 10px;
-                                                                 align-items: center;
-                                                               }
-                                                               @media (max-width:1241px) {
-                                                                .footer-cta{
-                                                                  display: flex;
-                                                                  flex-direction: column;
 
-                                                                }
-                                                                .explore{
-                                                                  font-size: 140%;
-                                                                }
-                                                                
-                                                               }
-                                                               .social-vertical {
-  position: fixed;
-  bottom: 138px;
-  display: flex;
-  justify-content: start;
-  gap: 14px;
-  z-index: 999;
-  left: 70%;
-}
+          <style>
+            .footer-cta {
+              display: grid;
+              grid-template-columns: 2fr 1.8fr;
+              gap: 10px;
+              align-items: center;
+            }
 
-.social-vertical a {
-  width: 42px;
-  height: 42px;
-  background: #111;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  font-size: 18px;
-  transition: all 0.3s ease;
-}
+            @media (max-width:1241px) {
+              .footer-cta {
+                display: flex;
+                flex-direction: column;
 
-.social-vertical a:hover {
-  background: #ff6a00;
-  transform: translateY(-4px);
-}
+              }
 
-/* Mobile handling */
-@media (max-width: 768px) {
-  .social-vertical {
-    position: static;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 20px;
-  }
-}
+              .explore {
+                font-size: 140%;
+              }
 
+            }
+
+            .social-vertical {
+              position: fixed;
+              bottom: 138px;
+              display: flex;
+              justify-content: start;
+              gap: 14px;
+              z-index: 999;
+              left: 70%;
+            }
+
+            .social-vertical a {
+              width: 42px;
+              height: 42px;
+              background: #111;
+              color: #fff;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 50%;
+              font-size: 18px;
+              transition: all 0.3s ease;
+            }
+
+            .social-vertical a:hover {
+              background: #ff6a00;
+              transform: translateY(-4px);
+            }
+
+            /* Mobile handling */
+            @media (max-width: 768px) {
+              .social-vertical {
+                position: static;
+                flex-direction: row;
+                justify-content: center;
+                margin-top: 20px;
+              }
+            }
           </style>
           <div class="container">
             <div class="footer-area-inner  ">
@@ -600,8 +622,8 @@
                 <div class="footer-widget-wrapper newsletter">
                   <form action="/book-demo" method="post" class="subscribe-form" id="subscribeForm">
                     <div class="input-field">
-                      <input type="tel" name="mobile" id="subscribeMobile" style="font-size: 16px;" placeholder="Enter your mobile number"
-                        maxlength="10" inputmode="numeric" required>
+                      <input type="tel" name="mobile" id="subscribeMobile" style="font-size: 16px;"
+                        placeholder="Enter your mobile number" maxlength="10" inputmode="numeric" required>
 
                       <button type="submit" class="subscribe-btn">
                         <img src="/assets/imgs/icon/arrow-light.webp" alt="icon">
@@ -657,20 +679,21 @@
                       }
                     });
                   </script>
-                   <div class="social-vertical mb-3">
-  <a href="https://www.instagram.com/golden.apple.productions/" target="_blank" aria-label="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-    <i class="fab fa-facebook-f"></i>
-  </a>
-  <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-    <i class="fa-brands fa-twitter"></i>
-  </a>
-  <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-</div>
+                  <div class="social-vertical mb-3">
+                    <a href="https://www.instagram.com/golden.apple.productions/" target="_blank"
+                      aria-label="Instagram">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                      <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
