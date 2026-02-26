@@ -1431,6 +1431,26 @@
         <h1 style="justify-content: center; text-align: center; margin-bottom:0; margin-top:40px; font-size:5rem;">
           Our Services
         </h1>
+        <style>
+          @media (max-width: 991px) {
+            .portfolio-active .swiper-wrapper {
+              display: flex !important;
+              flex-direction: column !important;
+              gap: 20px;
+              transform: translate3d(0px, 0px, 0px) !important;
+            }
+
+            .portfolio-active .swiper-slide {
+              width: 100% !important;
+              margin-right: 0 !important;
+            }
+
+            .portfolio-slider .slider-nav,
+            .portfolio-slider .portfolio-pagination {
+              display: none !important;
+            }
+          }
+        </style>
 
         <!-- portfolio area start -->
         <section class="portfolio-area">

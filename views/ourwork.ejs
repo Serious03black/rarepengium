@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -46,7 +47,8 @@
     .reel-item {
       position: relative;
       width: 100%;
-      padding-top: 177.78%; /* 9:16 aspect ratio */
+      padding-top: 177.78%;
+      /* 9:16 aspect ratio */
       overflow: hidden;
       border-radius: 16px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -86,9 +88,17 @@
     }
 
     @keyframes pulse {
-      0% { transform: translate(-50%, -50%) scale(1); }
-      50% { transform: translate(-50%, -50%) scale(1.15); }
-      100% { transform: translate(-50%, -50%) scale(1); }
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      50% {
+        transform: translate(-50%, -50%) scale(1.15);
+      }
+
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+      }
     }
 
     @media (max-width: 768px) {
@@ -96,10 +106,12 @@
         opacity: 0.9;
         animation: pulse 2s infinite;
       }
+
       .reels-grid {
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap: 20px;
       }
+
       .section-title {
         font-size: 2.5rem;
       }
@@ -117,7 +129,7 @@
       left: 0;
       right: 0;
       padding: 30px 20px 20px;
-      background: linear-gradient(transparent, rgba(0,0,0,0.9));
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
       color: white;
       opacity: 0;
       transition: opacity 0.4s ease;
@@ -196,18 +208,19 @@
     }
   </style>
   <style>
-      body.dark .section-title,
-body.dark h1,
-body.dark h2,
-body.dark h3 {
-  color: #caa437;;
-}
-
+    body.dark .section-title,
+    body.dark h1,
+    body.dark h2,
+    body.dark h3 {
+      color: #caa437;
+      ;
+    }
   </style>
 </head>
+
 <body class="font-heading-instumentsans-medium dark" style="font-family:'Montserrat', sans-serif !important">
   <div>
-<!-- <a target="_blank"
+    <!-- <a target="_blank"
   href="https://wa.me/917300031017"
   target="_blank"
   aria-label="Chat on WhatsApp"
@@ -255,12 +268,10 @@ body.dark h3 {
 >
   <i class="fa-brands fa-whatsapp"></i>
 </a> -->
-<!-- Fixed WhatsApp & Call Buttons -->
-  <div style="position:fixed; bottom:30px; right:30px; display:flex; flex-direction:column; gap:15px; z-index:1000;">
-    <!-- WhatsApp Button - Replace +911234567890 with your number -->
-    <a target="_blank" href="https://wa.me/917300031017"
-   aria-label="WhatsApp Chat"
-   style="
+    <!-- Fixed WhatsApp & Call Buttons -->
+    <div style="position:fixed; bottom:30px; right:30px; display:flex; flex-direction:column; gap:15px; z-index:1000;">
+      <!-- WhatsApp Button - Replace +911234567890 with your number -->
+      <a target="_blank" href="https://wa.me/917300031017" aria-label="WhatsApp Chat" style="
      width:60px;
      height:60px;
      border-radius:50%;
@@ -273,21 +284,20 @@ body.dark h3 {
      text-decoration:none;
      transition:all 0.3s ease;
      font-size:30px;
-   "
-   onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 28px rgba(0,0,0,0.45)'"
-   onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.4)'"
->
-  <i class="fa-brands fa-whatsapp"></i>
-</a>
+   " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 28px rgba(0,0,0,0.45)'"
+        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.4)'">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
 
-    <!-- Call Now Button - Replace +911234567890 with your number -->
-    <a target="_blank" href="tel:++91 7300031017" aria-label="Call Now" 
-       style="width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:#caa437; color:#000; box-shadow:0 6px 20px rgba(0,0,0,0.4); transition:all 0.3s ease; text-decoration:none;">
-      <svg viewBox="0 0 24 24" fill="currentColor" style="width:28px; height:28px;">
-        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-      </svg>
-    </a>
-  </div>
+      <!-- Call Now Button - Replace +911234567890 with your number -->
+      <a target="_blank" href="tel:++91 7300031017" aria-label="Call Now"
+        style="width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:#caa437; color:#000; box-shadow:0 6px 20px rgba(0,0,0,0.4); transition:all 0.3s ease; text-decoration:none;">
+        <svg viewBox="0 0 24 24" fill="currentColor" style="width:28px; height:28px;">
+          <path
+            d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+        </svg>
+      </a>
+    </div>
   </div>
   <!-- Preloader -->
   <div id="preloader">
@@ -300,13 +310,14 @@ body.dark h3 {
     </div>
   </div>
 
- 
 
- <div class="offcanvas-3__area" style="background:#000000; color:#ffffff;">
+
+  <div class="offcanvas-3__area" style="background:#000000; color:#ffffff;">
     <div class="offcanvas-3__inner" style="background:#000000; color:#ffffff;">
       <div class="offcanvas-3__meta-wrapper" style="color:#ffffff;">
         <div>
-          <button id="close_offcanvas" class="close-button close-offcanvas" onclick="hideCanvas3()" style="color:#ffffff;">
+          <button id="close_offcanvas" class="close-button close-offcanvas" onclick="hideCanvas3()"
+            style="color:#ffffff;">
             <span style="background:#ffffff;"></span>
             <span style="background:#ffffff;"></span>
           </button>
@@ -327,61 +338,61 @@ body.dark h3 {
             <li><a target="_blank" href="/" style="color:#ffffff;">Home</a></li>
             <li><a target="_blank" href="/about" style="color:#ffffff;">About</a></li>
             <li>
-  <a target="_blank" href="/services" style="color:#ffffff;">
-    Services
-  </a>
+              <a target="_blank" href="/services" style="color:#ffffff;">
+                Services
+              </a>
 
-  <ul style="
+              <ul style="
     margin-top:20px;
     padding-left:26px;
     list-style-type: disc;
     list-style-position: outside;
   ">
 
-    <li style="margin-bottom:11px; font-size:5px !important;">
-      <p>
-      <a target="_blank" href="/ethnic-fashion-shoots">
-        Ethnic Fashion Shoots
+                <li style="margin-bottom:11px; font-size:5px !important;">
+                  <p>
+                    <a target="_blank" href="/ethnic-fashion-shoots">
+                      Ethnic Fashion Shoots
 
-      </a>
-    </p>
-    </li>
-<style>
-  @media only screen and (max-width: 991px) {
-    .offcanvas-3__menu li a {
-        font-size: 1.5vh;
-        color: rgba(255, 255, 255, .6705882353);
-        background-image: unset;
-        -webkit-text-fill-color: unset;
-    }
-}
-</style>
-    <li style="margin-bottom:11px;">
-      <a target="_blank" href="/western-indo-western-shoot">
-        Western & Indo-Western Shoots
-      </a>
-    </li>
+                    </a>
+                  </p>
+                </li>
+                <style>
+                  @media only screen and (max-width: 991px) {
+                    .offcanvas-3__menu li a {
+                      font-size: 1.5vh;
+                      color: rgba(255, 255, 255, .6705882353);
+                      background-image: unset;
+                      -webkit-text-fill-color: unset;
+                    }
+                  }
+                </style>
+                <li style="margin-bottom:11px;">
+                  <a target="_blank" href="/western-indo-western-shoot">
+                    Western & Indo-Western Shoots
+                  </a>
+                </li>
 
-    <li style="margin-bottom:11px;">
-      <a target="_blank" href="/designer-collections-shoot">
-        Designer Collection & Couture Shoots
-      </a>
-    </li>
+                <li style="margin-bottom:11px;">
+                  <a target="_blank" href="/designer-collections-shoot">
+                    Designer Collection & Couture Shoots
+                  </a>
+                </li>
 
-    <li style="margin-bottom:11px;">
-      <a target="_blank" href="/retail-catalogue-shoot">
-        Retail, Store & Catalogue Shoots
-      </a>
-    </li>
+                <li style="margin-bottom:11px;">
+                  <a target="_blank" href="/retail-catalogue-shoot">
+                    Retail, Store & Catalogue Shoots
+                  </a>
+                </li>
 
-    <li style="margin-bottom:11px;">
-      <a target="_blank" href="/brand-campaigns-editorials-shoot">
-        Brand Identity & Concept Shoots
-      </a>
-    </li>
+                <li style="margin-bottom:11px;">
+                  <a target="_blank" href="/brand-campaigns-editorials-shoot">
+                    Brand Identity & Concept Shoots
+                  </a>
+                </li>
 
-  </ul>
-</li>
+              </ul>
+            </li>
 
             <li><a target="_blank" href="/ourwork" style="color:#ffffff;">Our Work</a></li>
             <li><a target="_blank" href="/blogs" style="color:#ffffff;">Blogs</a></li>
@@ -416,7 +427,9 @@ body.dark h3 {
           </nav>
         </div>
         <div class="header__button">
-          <a target="_blank" class="wc-btn wc-btn-primary btn-text-flip" href="javascript:void(0)" onclick="openDemoPopup()"><span data-text="Book Free Demo">Book Free Demo</span><i class="fa-solid fa-play"></i></a>
+          <a target="_blank" class="wc-btn wc-btn-primary btn-text-flip" href="javascript:void(0)"
+            onclick="openDemoPopup()"><span data-text="Book Free Demo">Book Free Demo</span><i
+              class="fa-solid fa-play"></i></a>
         </div>
         <div class="header__navicon d-xl-none">
           <button onclick="showCanvas3()" class="open-offcanvas">
@@ -440,16 +453,11 @@ body.dark h3 {
               <h2 class="section-title">Our Reels</h2>
               <p class="lead mb-5">Latest video content from Golden Apple Productions</p>
 
-              <% if (videos && videos.length > 0) { %>
+              <% if (videos && videos.length> 0) { %>
                 <div class="reels-grid">
-                  <% videos.forEach(video => { %>
+                  <% videos.forEach(video=> { %>
                     <div class="reel-item">
-                      <video 
-                        src="<%= video.videoUrl %>" 
-                        class="reel-video"
-                        muted 
-                        loop 
-                        playsinline
+                      <video src="<%= video.videoUrl %>#t=0.001" class="reel-video" muted loop playsinline
                         preload="metadata">
                       </video>
 
@@ -458,82 +466,88 @@ body.dark h3 {
                       </div>
 
                       <div class="reel-overlay">
-                        <div class="reel-title"><%= video.title || 'Untitled Reel' %></div>
-                        <div class="reel-desc"><%= video.description || '' %></div>
+                        <div class="reel-title">
+                          <%= video.title || 'Untitled Reel' %>
+                        </div>
+                        <div class="reel-desc">
+                          <%= video.description || '' %>
+                        </div>
                       </div>
                     </div>
-                  <% }) %>
+                    <% }) %>
                 </div>
-              <% } else { %>
-                <div class="no-reels">
-                  <i class="fa-solid fa-video"></i>
-                  <p>No reels uploaded yet.</p>
-                  <small>Check back soon for fresh content!</small>
-                </div>
-              <% } %>
+                <% } else { %>
+                  <div class="no-reels">
+                    <i class="fa-solid fa-video"></i>
+                    <p>No reels uploaded yet.</p>
+                    <small>Check back soon for fresh content!</small>
+                  </div>
+                  <% } %>
             </div>
           </section>
 
         </main>
-     <!-- footer area start  -->
+        <!-- footer area start  -->
         <footer class="footer-area">
-         
-                                                             <style>
-                                                              .footer-cta {
-                                                                 display: grid;
-                                                                 grid-template-columns: 2fr 1.8fr ;
-                                                                 gap: 10px;
-                                                                 align-items: center;
-                                                               }
-                                                               @media (max-width:1241px) {
-                                                                .footer-cta{
-                                                                  display: flex;
-                                                                  flex-direction: column;
 
-                                                                }
-                                                                .explore{
-                                                                  font-size: 140%;
-                                                                }
-                                                                
-                                                               }
-                                                               .social-vertical {
-  position: fixed;
-  bottom: 138px;
-  display: flex;
-  justify-content: start;
-  gap: 14px;
-  z-index: 999;
-  left: 70%;
-}
+          <style>
+            .footer-cta {
+              display: grid;
+              grid-template-columns: 2fr 1.8fr;
+              gap: 10px;
+              align-items: center;
+            }
 
-.social-vertical a {
-  width: 42px;
-  height: 42px;
-  background: #111;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  font-size: 18px;
-  transition: all 0.3s ease;
-}
+            @media (max-width:1241px) {
+              .footer-cta {
+                display: flex;
+                flex-direction: column;
 
-.social-vertical a:hover {
-  background: #ff6a00;
-  transform: translateY(-4px);
-}
+              }
 
-/* Mobile handling */
-@media (max-width: 768px) {
-  .social-vertical {
-    position: static;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 20px;
-  }
-}
+              .explore {
+                font-size: 140%;
+              }
 
+            }
+
+            .social-vertical {
+              position: fixed;
+              bottom: 138px;
+              display: flex;
+              justify-content: start;
+              gap: 14px;
+              z-index: 999;
+              left: 70%;
+            }
+
+            .social-vertical a {
+              width: 42px;
+              height: 42px;
+              background: #111;
+              color: #fff;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 50%;
+              font-size: 18px;
+              transition: all 0.3s ease;
+            }
+
+            .social-vertical a:hover {
+              background: #ff6a00;
+              transform: translateY(-4px);
+            }
+
+            /* Mobile handling */
+            @media (max-width: 768px) {
+              .social-vertical {
+                position: static;
+                flex-direction: row;
+                justify-content: center;
+                margin-top: 20px;
+              }
+            }
           </style>
           <div class="container">
             <div class="footer-area-inner  ">
@@ -550,8 +564,8 @@ body.dark h3 {
                 <div class="footer-widget-wrapper newsletter">
                   <form action="/book-demo" method="post" class="subscribe-form" id="subscribeForm">
                     <div class="input-field">
-                      <input type="tel" name="mobile" id="subscribeMobile" style="font-size: 16px;" placeholder="Enter your mobile number"
-                        maxlength="10" inputmode="numeric" required>
+                      <input type="tel" name="mobile" id="subscribeMobile" style="font-size: 16px;"
+                        placeholder="Enter your mobile number" maxlength="10" inputmode="numeric" required>
 
                       <button type="submit" class="subscribe-btn">
                         <img src="/assets/imgs/icon/arrow-light.webp" alt="icon">
@@ -607,20 +621,21 @@ body.dark h3 {
                       }
                     });
                   </script>
-                   <div class="social-vertical mb-4">
-  <a href="https://www.instagram.com/golden.apple.productions/" target="_blank" aria-label="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-    <i class="fab fa-facebook-f"></i>
-  </a>
-  <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-    <i class="fa-brands fa-twitter"></i>
-  </a>
-  <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-</div>
+                  <div class="social-vertical mb-4">
+                    <a href="https://www.instagram.com/golden.apple.productions/" target="_blank"
+                      aria-label="Instagram">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                      <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -650,7 +665,7 @@ body.dark h3 {
           </div>
         </footer>
         <!-- footer area end  -->
-        
+
       </div>
     </div>
   </div>
@@ -684,7 +699,7 @@ body.dark h3 {
       if (!isMobile) {
         // Desktop: Hover play
         item.addEventListener('mouseenter', () => {
-          video.play().catch(() => {});
+          video.play().catch(() => { });
           item.classList.add('playing');
         });
         item.addEventListener('mouseleave', () => {
@@ -711,7 +726,7 @@ body.dark h3 {
     });
   </script>
   <!-- Book Free Demo Popup -->
-<div id="demoPopupOverlay" style="
+  <div id="demoPopupOverlay" style="
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.6);
@@ -721,7 +736,7 @@ body.dark h3 {
   z-index: 2147483646;
 ">
 
-  <div style="
+    <div style="
     background: #ffffff;
     width: 90%;
     max-width: 420px;
@@ -733,8 +748,8 @@ body.dark h3 {
     font-family: inherit;
   ">
 
-    <!-- Close Icon -->
-    <span onclick="closeDemoPopup()" style="
+      <!-- Close Icon -->
+      <span onclick="closeDemoPopup()" style="
       position: absolute;
       top: 12px;
       right: 14px;
@@ -743,21 +758,16 @@ body.dark h3 {
       color: #999;
     ">✕</span>
 
-    <h3 style="
+      <h3 style="
       margin-bottom: 20px;
       color: #000;
       font-size: 22px;
       font-weight: 600;
     ">
-      Book Free Demo
-    </h3>
+        Book Free Demo
+      </h3>
 
-    <input
-      type="tel"
-      id="demoMobile"
-      placeholder="Enter mobile number"
-      maxlength="10"
-      style="
+      <input type="tel" id="demoMobile" placeholder="Enter mobile number" maxlength="10" style="
         width: 100%;
         padding: 14px;
         border-radius: 8px;
@@ -765,30 +775,26 @@ body.dark h3 {
         font-size: 16px;
         outline: none;
         margin-bottom: 10px;
-      "
-    />
+      " />
 
-    <p id="demoError" style="
+      <p id="demoError" style="
       color: red;
       font-size: 14px;
       display: none;
       margin-bottom: 10px;
     ">
-      Please enter a valid 10-digit mobile number
-    </p>
+        Please enter a valid 10-digit mobile number
+      </p>
 
-    <p id="demoSuccess" style="
+      <p id="demoSuccess" style="
       color: green;
       font-size: 14px;
       display: none;
       margin-bottom: 10px;
     ">
-    </p>
+      </p>
 
-    <button
-      id="demoSubmitBtn"
-      onclick="submitDemo()"
-      style="
+      <button id="demoSubmitBtn" onclick="submitDemo()" style="
         width: 100%;
         padding: 14px;
         background: #000;
@@ -798,78 +804,79 @@ body.dark h3 {
         font-size: 16px;
         cursor: pointer;
       ">
-      Submit
-    </button>
+        Submit
+      </button>
 
+    </div>
   </div>
-</div>
 
-<script>
-  function openDemoPopup() {
-    document.getElementById("demoPopupOverlay").style.display = "flex";
-  }
-
-  function closeDemoPopup() {
-    document.getElementById("demoPopupOverlay").style.display = "none";
-    document.getElementById("demoError").style.display = "none";
-    document.getElementById("demoSuccess").style.display = "none";
-    document.getElementById("demoMobile").value = "";
-  }
-
-  async function submitDemo() {
-    const mobile = document.getElementById("demoMobile").value.trim();
-    const error = document.getElementById("demoError");
-    const success = document.getElementById("demoSuccess");
-    const btn = document.getElementById("demoSubmitBtn");
-
-    error.style.display = "none";
-    success.style.display = "none";
-
-    // Frontend validation
-    if (!/^[6-9]\d{9}$/.test(mobile)) {
-      error.innerText = "Please enter a valid 10-digit mobile number";
-      error.style.display = "block";
-      return;
+  <script>
+    function openDemoPopup() {
+      document.getElementById("demoPopupOverlay").style.display = "flex";
     }
 
-    btn.innerText = "Submitting...";
-    btn.disabled = true;
+    function closeDemoPopup() {
+      document.getElementById("demoPopupOverlay").style.display = "none";
+      document.getElementById("demoError").style.display = "none";
+      document.getElementById("demoSuccess").style.display = "none";
+      document.getElementById("demoMobile").value = "";
+    }
 
-    try {
-      const res = await fetch("/book-demo", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ mobile })
-      });
+    async function submitDemo() {
+      const mobile = document.getElementById("demoMobile").value.trim();
+      const error = document.getElementById("demoError");
+      const success = document.getElementById("demoSuccess");
+      const btn = document.getElementById("demoSubmitBtn");
 
-      const data = await res.json();
+      error.style.display = "none";
+      success.style.display = "none";
 
-      if (!res.ok) {
-        throw new Error(data.error || "Something went wrong");
-      }
-
-      if (data.success) {
-        success.innerText = data.message;
-        success.style.display = "block";
-
-        setTimeout(() => {
-          closeDemoPopup();
-        }, 2000);
-      } else {
-        error.innerText = data.message || "Already registered";
+      // Frontend validation
+      if (!/^[6-9]\d{9}$/.test(mobile)) {
+        error.innerText = "Please enter a valid 10-digit mobile number";
         error.style.display = "block";
+        return;
       }
 
-    } catch (err) {
-      error.innerText = err.message || "Server error. Try again.";
-      error.style.display = "block";
-    } finally {
-      btn.innerText = "Submit";
-      btn.disabled = false;
+      btn.innerText = "Submitting...";
+      btn.disabled = true;
+
+      try {
+        const res = await fetch("/book-demo", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ mobile })
+        });
+
+        const data = await res.json();
+
+        if (!res.ok) {
+          throw new Error(data.error || "Something went wrong");
+        }
+
+        if (data.success) {
+          success.innerText = data.message;
+          success.style.display = "block";
+
+          setTimeout(() => {
+            closeDemoPopup();
+          }, 2000);
+        } else {
+          error.innerText = data.message || "Already registered";
+          error.style.display = "block";
+        }
+
+      } catch (err) {
+        error.innerText = err.message || "Server error. Try again.";
+        error.style.display = "block";
+      } finally {
+        btn.innerText = "Submit";
+        btn.disabled = false;
+      }
     }
-  }
-</script>
+  </script>
 </body>
+
 </html>
