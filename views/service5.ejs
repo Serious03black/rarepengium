@@ -292,11 +292,10 @@
                   /* ← this is the magic line */
                 }
 
-                /* ── Mobile: force horizontal video ── */
-                @media (max-width: 767px) {
+                /* ── Mobile/Tablet: force vertical video ── */
+                @media (max-width: 991px) {
                   .hero-video-container {
-                    height: auto !important;
-                    aspect-ratio: 16 / 9;
+                    height: 100vh !important;
                   }
 
                   #heroVideo {

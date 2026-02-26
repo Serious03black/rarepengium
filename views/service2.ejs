@@ -266,11 +266,10 @@
                 pointer-events: none;
               }
 
-              /* ── Mobile: force horizontal video ── */
-              @media (max-width: 767px) {
+              /* ── Mobile/Tablet: force vertical video ── */
+              @media (max-width: 991px) {
                 .hero-fullwidth {
-                  height: auto !important;
-                  aspect-ratio: 16 / 9;
+                  height: 100vh !important;
                 }
 
                 .hero-fullwidth video {

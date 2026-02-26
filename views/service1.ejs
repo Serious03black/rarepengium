@@ -29,10 +29,11 @@
     ;
   }
 </style>
+
 <body class="font-heading-beatricetrial-regular-2 dark" style="font-family:'Montserrat', sans-serif !important">
-<div style="position:fixed; bottom:30px; right:30px; display:flex; flex-direction:column; gap:15px; z-index:1000;">
-      <!-- WhatsApp Button - Replace +911234567890 with your number -->
-      <a href="https://wa.me/917300031017" aria-label="WhatsApp Chat" style="
+  <div style="position:fixed; bottom:30px; right:30px; display:flex; flex-direction:column; gap:15px; z-index:1000;">
+    <!-- WhatsApp Button - Replace +911234567890 with your number -->
+    <a href="https://wa.me/917300031017" aria-label="WhatsApp Chat" style="
      width:60px;
      height:60px;
      border-radius:50%;
@@ -46,19 +47,19 @@
      transition:all 0.3s ease;
      font-size:30px;
    " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 28px rgba(0,0,0,0.45)'"
-        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.4)'">
-        <i class="fa-brands fa-whatsapp"></i>
-      </a>
+      onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.4)'">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
-      <!-- Call Now Button - Replace +911234567890 with your number -->
-      <a href="tel:++91 7300031017" aria-label="Call Now"
-        style="width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:#caa437; color:#000; box-shadow:0 6px 20px rgba(0,0,0,0.4); transition:all 0.3s ease; text-decoration:none;">
-        <svg viewBox="0 0 24 24" fill="currentColor" style="width:28px; height:28px;">
-          <path
-            d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-        </svg>
-      </a>
-    </div>
+    <!-- Call Now Button - Replace +911234567890 with your number -->
+    <a href="tel:++91 7300031017" aria-label="Call Now"
+      style="width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:#caa437; color:#000; box-shadow:0 6px 20px rgba(0,0,0,0.4); transition:all 0.3s ease; text-decoration:none;">
+      <svg viewBox="0 0 24 24" fill="currentColor" style="width:28px; height:28px;">
+        <path
+          d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+      </svg>
+    </a>
+  </div>
   </a>
   <!-- Preloader -->
   <div id="preloader">
@@ -184,35 +185,38 @@
           <!-- service details area start  -->
           <section class="service-details-area">
             <div class="container">
-<style>
-     .hero-area {
-              position: relative;
-              width: 100%;
-              height: 100vh;
-              overflow: hidden;
-              background: #000;
-              margin: 0;
-              padding: 0;
-            }
-            .hero-video-wrapper {
-              position: absolute;
-              inset: 0;
-              z-index: 0;
-            }
-            .hero-video-wrapper video {
-              position: absolute;
-              inset: 0;
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              pointer-events: none;
-            }
-</style>
+              <style>
+                .hero-area {
+                  position: relative;
+                  width: 100%;
+                  height: 100vh;
+                  overflow: hidden;
+                  background: #000;
+                  margin: 0;
+                  padding: 0;
+                }
+
+                .hero-video-wrapper {
+                  position: absolute;
+                  inset: 0;
+                  z-index: 0;
+                }
+
+                .hero-video-wrapper video {
+                  position: absolute;
+                  inset: 0;
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  pointer-events: none;
+                }
+              </style>
               <!-- Hero Video -->
               <div class="thumb-main">
                 <div class="thumb-main">
                   <video id="heroVideo" autoplay muted loop>
-                <source src="https://res.cloudinary.com/dpztzthmz/video/upload/v1769099187/HeroVideo_d0f959.mp4" type="video/mp4" />
+                    <source src="https://res.cloudinary.com/dpztzthmz/video/upload/v1769099187/HeroVideo_d0f959.mp4"
+                      type="video/mp4" />
                   </video>
                   <style>
                     .thumb-main {
@@ -227,12 +231,12 @@
                       object-fit: contain;
                     }
 
-                    /* ── Mobile: force horizontal video ── */
-                    @media (max-width: 767px) {
+                    /* ── Mobile/Tablet: force vertical video ── */
+                    @media (max-width: 991px) {
                       .thumb-main {
-                        height: auto !important;
-                        aspect-ratio: 16 / 9;
+                        height: 100vh !important;
                       }
+
                       #heroVideo {
                         object-fit: cover !important;
                       }
@@ -241,40 +245,43 @@
                   <script>
                     const v = document.getElementById("heroVideo");
                     document.addEventListener("click", () => {
-                      
+
                       v.play();
                     }, { once: true });
                   </script>
                 </div>
               </div>
- <style>
-      .section1{
-        margin-top: 2%;
-        display: flex ;
-        flex-wrap: wrap;
-        gap: 130px;
-        flex-direction: row;
-      }
-      .feature-list{
-       color: white;
-       font-size: 20px;
-       display: flex;
-       gap: 20PX;
-      flex-direction: row;
+              <style>
+                .section1 {
+                  margin-top: 2%;
+                  display: flex;
+                  flex-wrap: wrap;
+                  gap: 130px;
+                  flex-direction: row;
+                }
 
-       line-height: 40PX;
-      flex-wrap: wrap !important;
-      }
-      .feature-list ul li::before {
-  content: "- ";
-}@media (max-width:1388px) {
-   .section1{
-        gap: 20px;
-      }
-  
-}
+                .feature-list {
+                  color: white;
+                  font-size: 20px;
+                  display: flex;
+                  gap: 20PX;
+                  flex-direction: row;
 
-    </style>
+                  line-height: 40PX;
+                  flex-wrap: wrap !important;
+                }
+
+                .feature-list ul li::before {
+                  content: "- ";
+                }
+
+                @media (max-width:1388px) {
+                  .section1 {
+                    gap: 20px;
+                  }
+
+                }
+              </style>
               <!-- Title + Features -->
               <div class="section1  ">
                 <div class="section">
@@ -301,12 +308,15 @@
               <!-- Description -->
               <div class="text-wrapper has_fade_anim">
                 <p class="text">
-                 We specialize in premium ethnic fashion shoots that present traditional collections with clarity, refinement, and cultural sensitivity. Our approach highlights craftsmanship, fabric richness, embroidery, and silhouette while maintaining a contemporary, editorial finish.
+                  We specialize in premium ethnic fashion shoots that present traditional collections with clarity,
+                  refinement, and cultural sensitivity. Our approach highlights craftsmanship, fabric richness,
+                  embroidery, and silhouette while maintaining a contemporary, editorial finish.
 
                 </p>
 
                 <p class="text">
-                 Each production is carefully structured to support couture, bridal, and festive collections across campaigns, catalogues, and brand platforms.
+                  Each production is carefully structured to support couture, bridal, and festive collections across
+                  campaigns, catalogues, and brand platforms.
 
                 </p>
               </div>
@@ -468,63 +478,65 @@
         </main>
         <!-- footer area start  -->
         <footer class="footer-area">
-         
-                                                             <style>
-                                                              .footer-cta {
-                                                                 display: grid;
-                                                                 grid-template-columns: 2fr 1.8fr ;
-                                                                 gap: 10px;
-                                                                 align-items: center;
-                                                               }
-                                                               @media (max-width:1241px) {
-                                                                .footer-cta{
-                                                                  display: flex;
-                                                                  flex-direction: column;
 
-                                                                }
-                                                                .explore{
-                                                                  font-size: 140%;
-                                                                }
-                                                                
-                                                               }
-                                                               .social-vertical {
-  position: fixed;
-  bottom: 138px;
-  display: flex;
-  justify-content: start;
-  gap: 14px;
-  z-index: 999;
-  left: 70%;
-}
+          <style>
+            .footer-cta {
+              display: grid;
+              grid-template-columns: 2fr 1.8fr;
+              gap: 10px;
+              align-items: center;
+            }
 
-.social-vertical a {
-  width: 42px;
-  height: 42px;
-  background: #111;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  font-size: 18px;
-  transition: all 0.3s ease;
-}
+            @media (max-width:1241px) {
+              .footer-cta {
+                display: flex;
+                flex-direction: column;
 
-.social-vertical a:hover {
-  background: #ff6a00;
-  transform: translateY(-4px);
-}
+              }
 
-/* Mobile handling */
-@media (max-width: 768px) {
-  .social-vertical {
-    position: static;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 20px;
-  }
-}
+              .explore {
+                font-size: 140%;
+              }
 
+            }
+
+            .social-vertical {
+              position: fixed;
+              bottom: 138px;
+              display: flex;
+              justify-content: start;
+              gap: 14px;
+              z-index: 999;
+              left: 70%;
+            }
+
+            .social-vertical a {
+              width: 42px;
+              height: 42px;
+              background: #111;
+              color: #fff;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 50%;
+              font-size: 18px;
+              transition: all 0.3s ease;
+            }
+
+            .social-vertical a:hover {
+              background: #ff6a00;
+              transform: translateY(-4px);
+            }
+
+            /* Mobile handling */
+            @media (max-width: 768px) {
+              .social-vertical {
+                position: static;
+                flex-direction: row;
+                justify-content: center;
+                margin-top: 20px;
+              }
+            }
           </style>
           <div class="container">
             <div class="footer-area-inner  ">
@@ -541,8 +553,8 @@
                 <div class="footer-widget-wrapper newsletter">
                   <form action="/book-demo" method="post" class="subscribe-form" id="subscribeForm">
                     <div class="input-field">
-                      <input type="tel" name="mobile" id="subscribeMobile" style="font-size: 16px;" placeholder="Enter your mobile number"
-                        maxlength="10" inputmode="numeric" required>
+                      <input type="tel" name="mobile" id="subscribeMobile" style="font-size: 16px;"
+                        placeholder="Enter your mobile number" maxlength="10" inputmode="numeric" required>
 
                       <button type="submit" class="subscribe-btn">
                         <img src="/assets/imgs/icon/arrow-light.webp" alt="icon">
@@ -598,20 +610,21 @@
                       }
                     });
                   </script>
-                   <div class="social-vertical mb-3">
-  <a href="https://www.instagram.com/golden.apple.productions/" target="_blank" aria-label="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-    <i class="fab fa-facebook-f"></i>
-  </a>
-  <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-    <i class="fa-brands fa-twitter"></i>
-  </a>
-  <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-</div>
+                  <div class="social-vertical mb-3">
+                    <a href="https://www.instagram.com/golden.apple.productions/" target="_blank"
+                      aria-label="Instagram">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                      <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
