@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -230,7 +231,7 @@
             max-width: 100%;
             max-height: 280px;
             border-radius: 12px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
         }
 
         .image-preview {
@@ -243,7 +244,7 @@
             max-width: 100%;
             max-height: 280px;
             border-radius: 12px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
         }
 
         .error {
@@ -290,12 +291,17 @@
             .sidebar {
                 width: 80px;
             }
-            .logo h2 span, .nav-item span, .logout-btn span {
+
+            .logo h2 span,
+            .nav-item span,
+            .logout-btn span {
                 display: none;
             }
+
             .nav-item {
                 justify-content: center;
             }
+
             .main-content {
                 margin-left: 80px;
             }
@@ -305,19 +311,21 @@
             .sidebar {
                 display: none;
             }
+
             .main-content {
                 margin-left: 0;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Sidebar (from dashboard, Reels + Blogs only) -->
     <aside class="sidebar">
         <div class="logo">
             <h2><span>Admin Pro</span></h2>
         </div>
-        
+
         <nav class="nav-menu">
             <a href="/admin/dashboard" class="nav-item">
                 <i class="fas fa-film"></i>
@@ -327,9 +335,9 @@
                 <i class="fas fa-blog"></i>
                 <span>Blogs</span>
             </a>
-            
+
             <div class="nav-divider"></div>
-            
+
             <a href="/admin/videos/add/reel" class="nav-item">
                 <i class="fas fa-plus-circle"></i>
                 <span>Add Reel</span>
@@ -339,7 +347,7 @@
                 <span>Add Blog</span>
             </a>
         </nav>
-        
+
         <a href="/admin/logout" class="logout-btn">
             <i class="fas fa-sign-out-alt"></i>
             <span>Logout</span>
@@ -351,40 +359,47 @@
         <div class="form-card">
             <h2>Edit Blog Post</h2>
 
-            <% if (typeof error !== 'undefined' && error) { %>
-                <div class="error"><%= error %></div>
-            <% } %>
-
-            <form action="/admin/blogs/edit/<%= blog._id %>" method="POST" enctype="multipart/form-data">
-                <input type="text" name="title" placeholder="Blog Title" value="<%= blog.title || '' %>" required>
-
-                <% if (blog.imageUrl) { %>
-                    <div class="current-image">
-                        <p>Current Image:</p>
-                        <img src="<%= blog.imageUrl %>" style="max-width: 100%; max-height: 300px; border-radius: 10px;">
-                        <p><small>Upload new image to replace</small></p>
-                    </div>
+            <% if (typeof error !=='undefined' && error) { %>
+                <div class="error">
+                    <%= error %>
+                </div>
                 <% } %>
 
-                <div class="image-upload" onclick="document.getElementById('imageUpload').click()">
-                    <div>Change featured image (optional)</div>
-                    <small>JPG, PNG • Recommended: 1200x800</small>
-                    <input type="file" id="imageUpload" name="image" accept="image/*" onchange="previewImage(event)">
-                </div>
-                <div class="image-preview" id="imagePreview">
-                    <img id="previewImg" src="" alt="Preview">
-                </div>
+                    <form action="/admin/blogs/edit/<%= blog._id %>" method="POST" enctype="multipart/form-data">
+                        <input type="text" name="title" placeholder="Blog Title" value="<%= blog.title || '' %>"
+                            required>
 
-                <textarea name="paragraph1" placeholder="Paragraph 1" required><%= blog.paragraph1 || '' %></textarea>
+                        <% if (blog.imageUrl) { %>
+                            <div class="current-image">
+                                <p>Current Image:</p>
+                                <img src="<%= blog.imageUrl %>"
+                                    style="max-width: 100%; max-height: 300px; border-radius: 10px;">
+                                <p><small>Upload new image to replace</small></p>
+                            </div>
+                            <% } %>
 
-                <textarea name="paragraph2" placeholder="Paragraph 2" required><%= blog.paragraph2 || '' %></textarea>
+                                <div class="image-upload" onclick="document.getElementById('imageUpload').click()">
+                                    <div>Change featured image (optional)</div>
+                                    <small>JPG, PNG • Recommended: 1200x800</small>
+                                    <input type="file" id="imageUpload" name="image" accept="image/*"
+                                        onchange="previewImage(event)">
+                                </div>
+                                <div class="image-preview" id="imagePreview">
+                                    <img id="previewImg" src="" alt="Preview">
+                                </div>
 
-                <textarea name="quote" placeholder="Quote (optional)"><%= blog.quote || '' %></textarea>
+                                <textarea name="paragraph1" placeholder="Paragraph 1"
+                                    required><%= blog.paragraph1 || '' %></textarea>
 
-                <button type="submit">Update Blog</button>
-            </form>
+                                <textarea name="paragraph2" placeholder="Paragraph 2"
+                                    required><%= blog.paragraph2 || '' %></textarea>
 
-            <a href="/admin/dashboard" class="back">← Back to Dashboard</a>
+                                <textarea name="quote" placeholder="Quote (optional)"><%= blog.quote || '' %></textarea>
+
+                                <button type="submit" id="submitBtn">Update Blog</button>
+                    </form>
+
+                    <a href="/admin/dashboard" class="back">← Back to Dashboard</a>
         </div>
     </main>
 
@@ -393,15 +408,40 @@
             const input = event.target;
             const preview = document.getElementById('imagePreview');
             const img = document.getElementById('previewImg');
+            const submitBtn = document.getElementById('submitBtn');
+            const maxMB = 4.5;
+            const maxSize = maxMB * 1024 * 1024;
+
             if (input.files && input.files[0]) {
+                if (input.files[0].size > maxSize) {
+                    alert('Image size exceeds the 4.5MB limit. Please upload a smaller image.');
+                    input.value = ''; // Clear file
+                    preview.style.display = 'none';
+                    img.src = '';
+                    if (submitBtn) {
+                        submitBtn.disabled = true;
+                        submitBtn.style.opacity = '0.5';
+                        submitBtn.style.cursor = 'not-allowed';
+                    }
+                    return;
+                }
+
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.style.opacity = '1';
+                    submitBtn.style.cursor = 'pointer';
+                }
                 const reader = new FileReader();
                 reader.onload = e => {
                     img.src = e.target.result;
                     preview.style.display = 'block';
                 };
                 reader.readAsDataURL(input.files[0]);
+            } else {
+                preview.style.display = 'none';
             }
         }
     </script>
 </body>
+
 </html>

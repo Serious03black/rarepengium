@@ -84,7 +84,7 @@ const videoStorage = new CloudinaryStorage({
 
 const videoUpload = multer({
   storage: videoStorage,
-  limits: { fileSize: 100 * 1024 * 1024 },
+  limits: { fileSize: 4.5 * 1024 * 1024 }, // 4.5MB limit for Vercel
 });
 
 const blogStorage = new CloudinaryStorage({
@@ -95,7 +95,10 @@ const blogStorage = new CloudinaryStorage({
     transformation: [{ width: 1200, crop: "limit" }],
   },
 });
-const uploadBlogImage = multer({ storage: blogStorage });
+const uploadBlogImage = multer({
+  storage: blogStorage,
+  limits: { fileSize: 4.5 * 1024 * 1024 } // 4.5MB limit for Vercel
+});
 
 // App Setup
 app.set("view engine", "ejs");
