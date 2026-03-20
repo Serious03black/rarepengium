@@ -134,21 +134,21 @@ const requireAdmin = (req, res, next) => {
 
 // ==================== PUBLIC ROUTES (no DB needed) ====================
 app.get("/", (req, res) => res.render("home"));
-app.get("/about", (req, res) => res.render("about"));
-app.get("/services", (req, res) => res.render("services"));
+// app.get("/about", (req, res) => res.render("about"));
+// app.get("/services", (req, res) => res.render("services"));
 
-app.get("/ethnic-fashion-Shoots", (req, res) => res.render("service1"));
-app.get("/western-indo-western-shoot", (req, res) => res.render("service2"));
-app.get("/designer-collections-shoot", (req, res) => res.render("service3"));
-app.get("/retail-catalogue-shoot", (req, res) => res.render("service4"));
-app.get("/brand-campaigns-editorials-shoot", (req, res) => res.render("service5"));
-app.get("/post-production-shoot", (req, res) => res.render("service6"));
+// app.get("/ethnic-fashion-Shoots", (req, res) => res.render("service1"));
+// app.get("/western-indo-western-shoot", (req, res) => res.render("service2"));
+// app.get("/designer-collections-shoot", (req, res) => res.render("service3"));
+// app.get("/retail-catalogue-shoot", (req, res) => res.render("service4"));
+// app.get("/brand-campaigns-editorials-shoot", (req, res) => res.render("service5"));
+// app.get("/post-production-shoot", (req, res) => res.render("service6"));
 
-app.get("/Terms&Conditions", (req, res) => res.render("terms"));
-app.get("/PrivacyPolicy", (req, res) => res.render("PP"));
+// app.get("/Terms&Conditions", (req, res) => res.render("terms"));
+// app.get("/PrivacyPolicy", (req, res) => res.render("PP"));
 
-app.get("/premium-shoot", (req, res) => res.render("landingpage"));
-app.get("/contact", (req, res) => res.render("contact"));
+// app.get("/premium-shoot", (req, res) => res.render("landingpage"));
+// app.get("/contact", (req, res) => res.render("contact"));
 
 // ==================== DB-RELATED PUBLIC ROUTES ====================
 app.get("/ourwork", ensureDBConnected, async (req, res) => {
@@ -263,7 +263,7 @@ app.post("/contact", ensureDBConnected, async (req, res) => {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thank You - Golden Apple Productions</title>
+<title>Thank You - rare penguin fashion</title>
 
 <!-- Font Awesome CDN for WhatsApp -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
@@ -313,7 +313,7 @@ app.post("/contact", ensureDBConnected, async (req, res) => {
   </h2>
 
   <p style="font-size:1.3rem;max-width:700px;margin:0 auto 40px;opacity:0.85;line-height:1.6;">
-    We truly appreciate you reaching out to Golden Apple Productions.<br>
+    We truly appreciate you reaching out to rare penguin fashion.<br>
     Our team will review your Enquiry and get back to you as soon as possible.
   </p>
 
