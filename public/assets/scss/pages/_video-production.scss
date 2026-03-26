@@ -473,8 +473,7 @@ h6 {
         display: grid;
         gap: 40px 80px;
         grid-template-columns: auto 660px;
-
-        @media #{$xl} {
+    align-items: center;        @media #{$xl} {
             grid-template-columns: auto 600px;
         }
 
